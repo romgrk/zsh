@@ -1,0 +1,117 @@
+#!/usr/bin/env luajit
+package.path = package.path .. '/home/romgrk/lua/share/?/init.lua;'
+package.path = package.path .. '/home/romgrk/lua/share/?/?.lua;'
+package.path = package.path .. '/home/romgrk/lua/share/?.lua;'
+local log = require('log')
+local allen = require('allen')
+local argv = {
+  ...
+}
+local cursor = {
+  normal = "\x1b[1 q",
+  replace = "\x1b[3 q",
+  insert = "\x1b[5 q",
+  operator = "\x1b[4 q",
+  visual = "\x1b[4 q"
+}
+local theme = {
+  normal = log.xcolor(20),
+  insert = log.xcolor(160),
+  visual = log.xcolor(128),
+  replace = log.xcolor(202),
+  _normal = log.xcolor(245),
+  _insert = log.xcolor(245),
+  _visual = log.xcolor(141),
+  _replace = log.xcolor(228),
+  white = log.xcolor(253),
+  med = log.xcolor(238),
+  dir = log.white,
+  dirbg = log.gray.bg,
+  dirsep = log.xcolor(244),
+  char = log.xcolor(233),
+  ok = log.green,
+  err = log.red
+}
+local Opts = {
+  psnum = 1,
+  cursor = os.getenv('CURSOR') or true
+}
+local Env = setmetatable({ }, {
+  __index = function(self, k)
+    return os.getenv(k)
+  end
+})
+local Prompt = {
+  text = '',
+  escape = function(self, seq)
+    return "%{" .. tostring(seq) .. "%}"
+  end,
+  ["if"] = function(self, cond, yes, no)
+    self.text = self.text .. "%(" .. tostring(cond) .. "." .. tostring(yes) .. "." .. tostring(no) .. ")"
+  end,
+  append = function(self, str)
+    self.text = self.text .. tostring(str)
+  end,
+  write = function(self)
+    local codes = '%c.-[mqK]'
+    local output = string.gsub(self.text, codes, self.escape)
+    return io.write(output)
+  end
+}
+for n, p in pairs(Prompt) do
+  if type(p) == 'function' then
+    Prompt[n] = function(...)
+      return p(Prompt, ...)
+    end
+  end
+end
+local mode = 'normal'
+if #argv > 0 then
+  mode = argv[1]
+end
+local color = theme[mode] or theme['insert']
+if mode == 'PS2' then
+  Opts.psnum = 2
+end
+if mode == 'git' then
+  Opts.psnum = 3
+end
+local bold = tostring(log.bold)
+local user = Env.USER
+local cwd = Env.PWD
+local dir = string.gsub(cwd, Env.HOME, '~')
+local psep = theme['dirsep'] .. '  ' .. theme['dir']
+local dir1 = (dir[1] == '/') and ('/' .. psep) or dir[1]
+dir = dir1 .. string.gsub(dir(2, -1), '/', psep)
+dir = string.gsub(dir, '%s*$', '')
+if theme['_' .. mode] then
+  theme['char'] = theme['_' .. mode]
+end
+local sep1 = color .. theme['dirbg'] .. ''
+local sep3 = log.RST .. theme['char'] .. ''
+local sep2 = log.gray .. theme['char'].bg .. ''
+if Opts.cursor ~= 0 and cursor[mode] and mode ~= 'git' then
+  Prompt.append(cursor[mode])
+  Prompt.append('\x1b[1K')
+end
+if Opts.psnum == 1 then
+  Prompt.append(theme['white'] .. bold .. theme[mode].bg(" %n "))
+  Prompt.append(sep1)
+  Prompt.append(theme['dir'] .. theme['dirbg'] .. " " .. tostring(dir) .. " ")
+  Prompt.append(sep2)
+  Prompt["if"]('?', theme['ok'], theme['err'])
+  Prompt.append(' %(!.#.$) ' .. log.RST)
+  Prompt.append(sep3)
+  Prompt.append(log.RST .. ' ')
+elseif Opts.psnum == 2 then
+  Prompt.append(log.gray .. theme['char'].bg .. ' … ')
+  Prompt.append(sep3)
+  Prompt.append(log.RST .. ' ')
+elseif mode == 'git' then
+  Prompt.append(log.gray .. '' .. theme['dirbg'].bg)
+  Prompt.append(log.xcolor(27) .. '  ')
+  Prompt.append(theme['white'])
+  Prompt.append(argv[2])
+  Prompt.append(' ' .. log.RST)
+end
+return Prompt.write()

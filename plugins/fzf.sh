@@ -1,0 +1,1 @@
+/home/romgrk/local/share/fzf.sh
