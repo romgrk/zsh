@@ -56,6 +56,7 @@ TERM screen.linux
 TERM st
 TERM st-256color
 TERM terminator
+TERM roxterminal
 TERM vt100
 TERM xterm
 TERM xterm-16color
@@ -74,20 +75,19 @@ TERM xterm-debian
 # Background color codes:
 # 40=black 41=red 42=green 43=yellow 44=blue 45=magenta 46=cyan 47=white
 
-#NORMAL 00 # no color code at all
-#FILE 00 # regular file: use no color at all
-RESET 0 # reset to "normal" color
-#DIR 01;38;5;227 # directory
-DIR 01;93 # directory
-LINK 01;38;5;215 # symbolic link. (If you set this to 'target' instead of a
- # numerical value, the color is as for the file pointed to.)
-MULTIHARDLINK 00 # regular file with more than one link
+NORMAL 00 # no color code at all
+FILE 00 # regular file: use no color at all
+RESET 00 # reset to "normal" color
+DIR 01;38;5;226 # directory
+LINK 3;4;38;5;221 # symbolic link. (If you set this to 'target' instead of a
+SYMLINK target 
+MULTIHARDLINK 03 # regular file with more than one link
+ORPHAN 01;03;38;5;196;48;5;52 # symlink to nonexistent file, or non-stat'able file
 FIFO 40;33 # pipe
 SOCK 01;35 # socket
 DOOR 01;35 # door
 BLK 40;33;01 # block device driver
 CHR 40;33;01 # character device driver
-ORPHAN 40;91;03 # symlink to nonexistent file, or non-stat'able file
 SETUID 37;41 # file that is setuid (u+s)
 SETGID 30;43 # file that is setgid (g+s)
 CAPABILITY 30;41 # file with capability
@@ -95,7 +95,7 @@ STICKY_OTHER_WRITABLE 30;42 # dir that is sticky and other-writable (+t,o+w)
 OTHER_WRITABLE 34;42 # dir that is other-writable (o+w) and not sticky
 STICKY 37;44 # dir with the sticky bit set (+t) and not other-writable
 # This is for files with execute permission:
-EXEC 00;32
+EXEC 38;5;46
 
 # Or if you want to colorize scripts even if they do not have the
 # executable bit actually set.
@@ -103,140 +103,159 @@ EXEC 00;32
 .zsh 00;38;5;105
 #.zsh 00;38;5;105
 
+# Build
+.make 01;38;5;101
+.rake 01;38;5;101
+.gyp 01;38;5;101
+
+# Eeeh
+.json 38;5;202
+.cson 38;5;202
+
 # Code
-.js 00;38;5;39
-.ts 00;38;5;39
-.coffee 00;38;5;39
-.py 00;38;5;39
-.rb 00;38;5;39
-.lua 00;38;5;39
-.moon 00;38;5;39
+.js 00;38;5;112
+.es6 00;38;5;112
+.ts 00;38;5;112
+.coffee 00;38;5;112
+.py 00;38;5;112
+.py3 00;38;5;112
+.rb 00;38;5;112
+.lua 00;38;5;112
+.moon 00;38;5;112
 
 # Styling
-.css 3;95
-.less 3;95
-.scss 3;95
-.sass 3;95
+.css  00;38;5;45
+.less 00;38;5;45
+.scss 00;38;5;45
+.sass 00;38;5;45
+
+# Markup
+.md 00;38;5;201
+.html 00;38;5;201
+.yml 00;38;5;201
 
 # Text & log
-.md 00;38;5;244
-.txt 00;38;5;244
-.log 00;38;5;244
-.lock 00;38;5;244
-.tags 00;38;5;244
-.gitignore 00;38;5;244
+.txt 00;38;5;249
+.list 00;38;5;249
+.log 00;38;5;246
+.lock 00;38;5;246
+.tags 00;38;5;246
+.ctags 00;38;5;246
+.gitignore 00;38;5;246
+.npmignore 00;38;5;246
 
 # archives or compressed (bright red)
-.tar 00;31
-.tgz 00;31
-.arc 00;31
-.arj 00;31
-.taz 00;31
-.lha 00;31
-.lz4 00;31
-.lzh 00;31
-.lzma 00;31
-.tlz 00;31
-.txz 00;31
-.tzo 00;31
-.t7z 00;31
-.zip 00;31
-.z 00;31
-.Z 00;31
-.dz 00;31
-.gz 00;31
-.lrz 00;31
-.lz 00;31
-.lzo 00;31
-.xz 00;31
-.bz2 00;31
-.bz 00;31
-.tbz 00;31
-.tbz2 00;31
-.tz 00;31
-.deb 00;31
-.rpm 00;31
-.jar 00;31
-.war 00;31
-.ear 00;31
-.sar 00;31
-.rar 00;31
-.alz 00;31
-.ace 00;31
-.zoo 00;31
-.cpio 00;31
-.7z 00;31
-.rz 00;31
-.cab 00;31
+.tar 00;38;5;9
+.tgz 00;38;5;9
+.arc 00;38;5;9
+.arj 00;38;5;9
+.taz 00;38;5;9
+.lha 00;38;5;9
+.lz4 00;38;5;9
+.lzh 00;38;5;9
+.lzma 00;38;5;9
+.tlz 00;38;5;9
+.txz 00;38;5;9
+.tzo 00;38;5;9
+.t7z 00;38;5;9
+.zip 00;38;5;9
+.z 00;38;5;9
+.Z 00;38;5;9
+.dz 00;38;5;9
+.gz 00;38;5;9
+.lrz 00;38;5;9
+.lz 00;38;5;9
+.lzo 00;38;5;9
+.xz 00;38;5;9
+.bz2 00;38;5;9
+.bz 00;38;5;9
+.tbz 00;38;5;9
+.tbz2 00;38;5;9
+.tz 00;38;5;9
+.deb 00;38;5;9
+.rpm 00;38;5;9
+.jar 00;38;5;9
+.war 00;38;5;9
+.ear 00;38;5;9
+.sar 00;38;5;9
+.rar 00;38;5;9
+.alz 00;38;5;9
+.ace 00;38;5;9
+.zoo 00;38;5;9
+.cpio 00;38;5;9
+.7z 00;38;5;9
+.rz 00;38;5;9
+.cab 00;38;5;9
 
 # image formats
-.jpg 00;35
-.jpeg 00;35
-.gif 00;35
-.bmp 00;35
-.pbm 00;35
-.pgm 00;35
-.ppm 00;35
-.tga 00;35
-.xbm 00;35
-.xpm 00;35
-.tif 00;35
-.tiff 00;35
-.png 00;35
-.svg 00;35
-.svgz 00;35
-.mng 00;35
-.pcx 00;35
-.mov 00;35
-.mpg 00;35
-.mpeg 00;35
-.m2v 00;35
-.mkv 00;35
-.webm 00;35
-.ogm 00;35
-.mp4 00;35
-.m4v 00;35
-.mp4v 00;35
-.vob 00;35
-.qt 00;35
-.nuv 00;35
-.wmv 00;35
-.asf 00;35
-.rm 00;35
-.rmvb 00;35
-.flc 00;35
-.avi 00;35
-.fli 00;35
-.flv 00;35
-.gl 00;35
-.dl 00;35
-.xcf 00;35
-.xwd 00;35
-.yuv 00;35
-.cgm 00;35
-.emf 00;35
+.jpg 00;38;5;13
+.jpeg 00;38;5;13
+.gif 00;38;5;13
+.bmp 00;38;5;13
+.pbm 00;38;5;13
+.pgm 00;38;5;13
+.ppm 00;38;5;13
+.tga 00;38;5;13
+.xbm 00;38;5;13
+.xpm 00;38;5;13
+.tif 00;38;5;13
+.tiff 00;38;5;13
+.png 00;38;5;13
+.svg 00;38;5;13
+.svgz 00;38;5;13
+.mng 00;38;5;13
+.pcx 00;38;5;13
+.mov 00;38;5;13
+.mpg 00;38;5;13
+.mpeg 00;38;5;13
+.m2v 00;38;5;13
+.mkv 00;38;5;13
+.webm 00;38;5;13
+.ogm 00;38;5;13
+.mp4 00;38;5;13
+.m4v 00;38;5;13
+.mp4v 00;38;5;13
+.vob 00;38;5;13
+.qt 00;38;5;13
+.nuv 00;38;5;13
+.wmv 00;38;5;13
+.asf 00;38;5;13
+.rm 00;38;5;13
+.rmvb 00;38;5;13
+.flc 00;38;5;13
+.avi 00;38;5;13
+.fli 00;38;5;13
+.flv 00;38;5;13
+.gl 00;38;5;13
+.dl 00;38;5;13
+.xcf 00;38;5;13
+.xwd 00;38;5;13
+.yuv 00;38;5;13
+.cgm 00;38;5;13
+.emf 00;38;5;13
 # http://wiki.xiph.org/index.php/MIME_Types_and_File_Extensions
-.axv 00;35
-.anx 00;35
-.ogv 00;35
-.ogx 00;35
+.axv 00;38;5;13
+.anx 00;38;5;13
+.ogv 00;38;5;13
+.ogx 00;38;5;13
 
 # audio formats
-.aac 00;36
-.au 00;36
-.flac 00;36
-.m4a 00;36
-.mid 00;36
-.midi 00;36
-.mka 00;36
-.mp3 00;36
-.mpc 00;36
-.ogg 00;36
-.ra 00;36
-.wav 00;36
+.aac 00;38;5;35
+.au 00;38;5;35
+.flac 00;38;5;35
+.m4a 00;38;5;35
+.mid 00;38;5;35
+.midi 00;38;5;35
+.mka 00;38;5;35
+.mp3 00;38;5;35
+.mpc 00;38;5;35
+.ogg 00;38;5;35
+.ra 00;38;5;35
+.wav 00;38;5;35
+
 # http://wiki.xiph.org/index.php/MIME_Types_and_File_Extensions
-.axa 00;36
-.oga 00;36
-.spx 00;36
-.xspf 00;36
+.axa 00;48;5;92
+.oga 00;48;5;92
+.spx 00;48;5;92
+.xspf 00;48;5;92
 
