@@ -74,7 +74,6 @@ alias car="cat"
 alias now='date +%T'
 alias atq='_ atq'
 alias atrm='_ atrm'
-alias rm="gvfs-trash"
 alias mmv='zmv -n'
 alias gv="gloobus-preview"
 alias launch="gtk-launch"
@@ -108,7 +107,6 @@ alias v="gloobus-preview"
 alias pacl='pacman -Q'
 alias pacu='pacman -S --noconfirm'
 alias noderesolve="node -p 'require.resolve(process.argv[1])'"
-alias atom="atom-git"
 alias lvim="/home/romgrk/github/neovim/build/bin/nvim"
 alias grep="noglob grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}"
 alias pi='pip install'
@@ -118,3 +116,7 @@ alias pacgrep="pacman -Q | grep"
 alias amen='git commit --amen'
 alias diskusage="du -sk -- * | sort -n | perl -pe '@SI=qw(K M G T P); s:^(\d+?)((\d\d\d)*)\s:." ".."	":e'"
 alias jv="jq ''"
+alias serve='http-server -c-1'
+alias gds='git diff --staged'
+alias gss='git stash'
+alias gsp='git stash pop'
