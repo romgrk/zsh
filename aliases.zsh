@@ -1,6 +1,5 @@
 alias _=sudo
 
-alias l="ls"
 alias ls="ls --group-directories-first --color=always"
 alias la="ls -vA"
 alias ll='ls -lhG'
@@ -80,8 +79,6 @@ alias launch="gtk-launch"
 alias rocks='_ luarocks-5.1'
 alias kall="killall"
 alias gyp="node-gyp"
-alias clip='xclip -selection clipboard'
-alias put='clip -o'
 alias catjson="jq ''"
 alias json="catjson"
 alias dircolorsToVifm="vifm-convert-dircolors -e > .config/vifm/colors/Default.vifm"
@@ -101,7 +98,6 @@ alias pacn='pacman -S --needed --noconfirm'
 alias pss="yaourt -Ss"
 alias pacman="yaourt"
 alias lo='cd /home/romgrk/.local'
-alias pyu='_ pacman -Syu --noconfirm'
 alias lc="lsc"
 alias v="gloobus-preview"
 alias pacl='pacman -Q'
@@ -116,7 +112,24 @@ alias pacgrep="pacman -Q | grep"
 alias amen='git commit --amen'
 alias diskusage="du -sk -- * | sort -n | perl -pe '@SI=qw(K M G T P); s:^(\d+?)((\d\d\d)*)\s:." ".."	":e'"
 alias jv="jq ''"
-alias serve='http-server -c-1'
+alias apti='sudo apt-get install'
+alias apts='apt-cache search'
 alias gds='git diff --staged'
+alias rg-ls='rg --files-with-matches'
 alias gss='git stash'
 alias gsp='git stash pop'
+alias gr='git rebase'
+alias gpf='git push --force'
+alias gpu='git push -u origin `git rev-parse --abbrev-ref HEAD`'
+alias clip='xsel -b -i'
+alias put='xsel -b'
+alias lsone='ls --color=never -1'
+alias build='npm run build'
+alias gemini-query='gemini query /home/rgregoir/data/gemini.db --header -q'
+alias csvtojson-tab="csvtojson --delimiter='\t'"
+alias docker-compose='sudo docker-compose'
+alias gcm='git commit -m'
+alias l="ls_or_cat"
+alias npmitmp='cd /home/rgregoir/tmp'
+alias npmitmp="cd ~/tmp && npm i"
+alias todo="rg -i 'fixme|todo' `git rev-parse --show-toplevel` "
