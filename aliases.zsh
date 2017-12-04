@@ -132,4 +132,4 @@ alias gcm='git commit -m'
 alias l="ls_or_cat"
 alias npmitmp='cd /home/rgregoir/tmp'
 alias npmitmp="cd ~/tmp && npm i"
-alias todo="rg -i 'fixme|todo' `git rev-parse --show-toplevel` "
+alias todo='rg -i "fixme|todo" `git rev-parse --show-toplevel`'
