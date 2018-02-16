@@ -4,7 +4,7 @@
 
 source $HOME/.profile
 
-export fpath=($HOME/var/zsh $fpath)
+export fpath=($HOME/.cache/zsh $fpath)
 
 export HISTFILE="$ZSHDOT/.history"
 export ZSH_ALIASES="$ZSHDOT/aliases.zsh"
@@ -28,7 +28,7 @@ COLORS=true #default
 
 # Zsh options
 source "$ZSHDOT/setup.zsh"
-
+autoload -U zmv
 
 # Plugins
 source "$ZSHDOT/antigen/antigen.zsh"
