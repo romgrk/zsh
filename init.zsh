@@ -40,7 +40,7 @@ antigen bundles <<EOB
     t413/zsh-background-notify
     zsh-users/zsh-completions
     zsh-users/zsh-syntax-highlighting
-    # "zsh-users/zsh-autosuggestions"
+    zsh-users/zsh-autosuggestions
 EOB
 antigen apply
 
@@ -73,3 +73,5 @@ source "$ZSHDOT/aliases.zsh"
 
 unset -f nmap
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
