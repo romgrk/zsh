@@ -1,4 +1,4 @@
-#files: 778	version: 5.2
+#files: 723	version: 5.5.1
 
 _comps=(
 '-' '_precommand'
@@ -12,30 +12,31 @@ _comps=(
 'a2ps' '_a2ps'
 'aaaa' '_hosts'
 'aap' '_aap'
-'ack' '_ack'
-'ack2' '_ack'
-'ack-grep' '_ack'
-'ack-standalone' '_ack'
 'acpi' '_acpi'
 'acpitool' '_acpitool'
 'acroread' '_acroread'
 'adb' '_adb'
+'add-zle-hook-widget' '_add-zle-hook-widget'
 'add-zsh-hook' '_add-zsh-hook'
 'admin' '_sccs'
-'ag' '_ag'
 'ali' '_mh'
 'alias' '_alias'
 'amaya' '_webbrowser'
 'analyseplugin' '_analyseplugin'
-'android' '_android'
 'animate' '_imagemagick'
 'anno' '_mh'
 'ansible' '_ansible'
-'ansible-galaxy' '_ansible-galaxy'
-'ansible-playbook' '_ansible-playbook'
-'ansible-vault' '_ansible-vault'
+'ansible-config' '_ansible'
+'ansible-console' '_ansible'
+'ansible-doc' '_ansible'
+'ansible-galaxy' '_ansible'
+'ansible-inventory' '_ansible'
+'ansible-playbook' '_ansible'
+'ansible-pull' '_ansible'
+'ansible-vault' '_ansible'
 'ant' '_ant'
 'antiword' '_antiword'
+'aodh' '_openstack'
 'aoss' '_precommand'
 'apache2ctl' '_apachectl'
 'apachectl' '_apachectl'
@@ -47,22 +48,22 @@ _comps=(
 'arp' '_arp'
 'arping' '_arping'
 '-array-value-' '_value'
-'artisan' '_artisan'
 '-assign-parameter-' '_assign'
 'at' '_at'
-'atach' '_atach'
 'atq' '_at'
 'atrm' '_at'
 'attr' '_attr'
 'augtool' '_augeas'
-'auto-auto-complete' '_auto-auto-complete'
 'autoload' '_typeset'
 'awk' '_awk'
+'barbican' '_openstack'
+'basename' '_basename'
 'bash' '_sh'
 'batch' '_at'
 'baz' '_baz'
 'beep' '_beep'
 'bg' '_jobs_bg'
+'bibtex' '_bibtex'
 'bindkey' '_bindkey'
 'bison' '_bison'
 'bmake' '_make'
@@ -70,7 +71,6 @@ _comps=(
 'bogotune' '_bogofilter'
 'bogoutil' '_bogofilter'
 'bootctl' '_bootctl'
-'bower' '_bower'
 'bpython' '_bpython'
 'bpython2' '_bpython'
 'bpython2-gtk' '_bpython'
@@ -96,7 +96,6 @@ _comps=(
 'bttrack' '_bittorrent'
 'buildhash' '_ispell'
 'builtin' '_builtin'
-'bundle' '_bundle'
 'bunzip2' '_bzip2'
 'burst' '_mh'
 'busctl' '_busctl'
@@ -108,9 +107,7 @@ _comps=(
 'cabal' '_cabal'
 'cal' '_cal'
 'calendar' '_calendar'
-'cap' '_cap'
 'cargo' '_cargo'
-'cask' '_cask'
 'cat' '_cat'
 'catchsegv' '_precommand'
 'cc' '_gcc'
@@ -121,32 +118,34 @@ _comps=(
 'cdr' '_cdr'
 'cdrdao' '_cdrdao'
 'cdrecord' '_cdrecord'
-'celery' '_celery'
+'ceilometer' '_openstack'
 'certtool' '_gnutls'
 'cftp' '_twisted'
 'chage' '_users'
+'chattr' '_chattr'
 'chdir' '_cd'
-'cheat' '_cheat'
 'chfn' '_users'
 'chgrp' '_chown'
 'chimera' '_webbrowser'
 'chkconfig' '_chkconfig'
 'chmod' '_chmod'
-'choc' '_choc'
 'chown' '_chown'
 'chpass' '_chsh'
 'chrt' '_chrt'
 'chsh' '_chsh'
 'ci' '_rcs'
+'cifsiostat' '_sysstat'
+'cinder' '_openstack'
 'ckeygen' '_twisted'
 'clang' '_gcc'
 'clang++' '_gcc'
 'clay' '_clay'
 'clear' '_nothing'
-'cmake' '_cmake'
+'cloudkitty' '_openstack'
 'cmp' '_cmp'
 'co' '_rcs'
-'coffee' '_coffee'
+'code' '_code'
+'column' '_column'
 'comb' '_sccs'
 'combine' '_imagemagick'
 'combinediff' '_patchutils'
@@ -157,36 +156,33 @@ _comps=(
 'comp' '_mh'
 'compadd' '_compadd'
 'compdef' '_compdef'
-'composer' '_composer'
 'composite' '_imagemagick'
 'compress' '_compress'
 'conch' '_twisted'
 '-condition-' '_condition'
 'config.status' '_configure'
 'configure' '_configure'
-'console' '_console'
 'convert' '_imagemagick'
 'coredumpctl' '_coredumpctl'
 'cowsay' '_cowsay'
 'cowthink' '_cowsay'
 'cp' '_cp'
-'cpanm' '_cpanm'
 'cpio' '_cpio'
 'cplay' '_cplay'
-'createdb' '_pgsql_utils'
-'createuser' '_pgsql_utils'
+'cpupower' '_cpupower'
 'crsh' '_cssh'
 'cryptsetup' '_cryptsetup'
+'cscope' '_cscope'
 'csh' '_sh'
 'cssh' '_cssh'
 'curl' '_curl'
 'cut' '_cut'
 'cvs' '_cvs'
-'dad' '_dad'
 'darcs' '_darcs'
 'date' '_date'
 'dbus-monitor' '_dbus'
 'dbus-send' '_dbus'
+'dconf' '_dconf'
 'dcop' '_dcop'
 'dcopclient' '_dcop'
 'dcopfind' '_dcop'
@@ -194,20 +190,18 @@ _comps=(
 'dcopref' '_dcop'
 'dcopstart' '_dcop'
 'dd' '_dd'
-'debuild' '_debuild'
 'declare' '_typeset'
 '-default-' '_default'
 'delta' '_sccs'
+'designate' '_openstack'
 'devtodo' '_devtodo'
 'df' '_df'
-'dget' '_dget'
 'dhclient' '_dhclient'
 'dhclient3' '_dhclient'
-'dhcpcd' '_dhcpcd'
-'diana' '_diana'
 'dict' '_dict'
 'diff' '_diff'
 'diffstat' '_diffstat'
+'dig' '_dig'
 'dillo' '_webbrowser'
 'dircmp' '_directories'
 'dirs' '_dirs'
@@ -215,19 +209,17 @@ _comps=(
 'disown' '_jobs_fg'
 'display' '_imagemagick'
 'dist' '_mh'
-'ditz' '_ditz'
 'django-admin' '_django'
 'django-admin.py' '_django'
 'dmake' '_make'
+'dmesg' '_dmesg'
 'dmidecode' '_dmidecode'
+'doas' '_doas'
 'docker' '_docker'
+'docker-compose' '_docker-compose'
 'dockerd' '_docker'
-'docker-machine' '_docker-machine'
-'docpad' '_docpad'
 'domainname' '_yp'
-'dropdb' '_pgsql_utils'
-'dropuser' '_pgsql_utils'
-'drush' '_drush'
+'drill' '_drill'
 'dsh' '_dsh'
 'du' '_du'
 'dvibook' '_dvi'
@@ -240,7 +232,7 @@ _comps=(
 'dvitodvi' '_dvi'
 'dvitype' '_dvi'
 'dwb' '_webbrowser'
-'dzen2' '_dzen2'
+'eatmydata' '_precommand'
 'ecasound' '_ecasound'
 'echotc' '_echotc'
 'echoti' '_echoti'
@@ -249,9 +241,9 @@ _comps=(
 'elinks' '_elinks'
 'elm' '_elm'
 'emulate' '_emulate'
-'emulator' '_emulator'
 'enable' '_enable'
 'enscript' '_enscript'
+'entr' '_entr'
 'env' '_env'
 'epdfview' '_pdf'
 'epsffit' '_psutils'
@@ -261,23 +253,25 @@ _comps=(
 'etags' '_etags'
 'ethtool' '_ethtool'
 'eu-nm' '_nm'
+'eu-objdump' '_objdump'
 'eu-readelf' '_readelf'
+'eu-strings' '_strings'
 'eval' '_precommand'
 'eview' '_vim'
 'evim' '_vim'
-'evince' '_pspdf'
+'evince' '_evince'
 'exec' '_precommand'
+'expand' '_unexpand'
 'export' '_typeset'
-'exportfs' '_exportfs'
 'express' '_webbrowser'
 'extcheck' '_java'
 'extractres' '_psutils'
-'fab' '_fab'
 'fakeroot' '_fakeroot'
 'false' '_nothing'
 'fc' '_fc'
 'fc-list' '_xft_fonts'
 'fc-match' '_xft_fonts'
+'fd' '_fd'
 'feh' '_feh'
 'fetchmail' '_fetchmail'
 'ffmpeg' '_ffmpeg'
@@ -300,22 +294,26 @@ _comps=(
 'fixwfwps' '_psutils'
 'fixwpps' '_psutils'
 'fixwwps' '_psutils'
+'flac' '_flac'
 'flasher' '_flasher'
-'fleetctl' '_fleetctl'
 'flex' '_flex'
+'flex++' '_flex'
 'flipdiff' '_patchutils'
 'flist' '_mh'
 'flists' '_mh'
 'float' '_typeset'
+'fmt' '_fmt'
 'fmttest' '_mh'
 'fned' '_zed'
 'fnext' '_mh'
+'fold' '_fold'
 'folder' '_mh'
 'folders' '_mh'
 'fortune' '_fortune'
 'forw' '_mh'
 'fprev' '_mh'
 'freebsd-make' '_make'
+'freezer' '_openstack'
 'fsh' '_fsh'
 'ftp' '_hosts'
 'functions' '_typeset'
@@ -324,22 +322,29 @@ _comps=(
 'fwhois' '_whois'
 'g++' '_gcc'
 'galeon' '_webbrowser'
-'gas' '_gas'
-'gcc' '_gnu_generic'
+'gawk' '_awk'
+'gbasename' '_basename'
+'gcat' '_cat'
+'gcc' '_gcc'
 'gccgo' '_go'
+'gchgrp' '_chown'
 'gchmod' '_chmod'
+'gchown' '_chown'
 'gcmp' '_cmp'
 'gcomm' '_comm'
 'gcore' '_gcore'
 'gcp' '_cp'
+'gcut' '_cut'
 'gdate' '_date'
-'gdb' '_gnu_generic'
+'gdb' '_gdb'
+'gdd' '_dd'
+'gdf' '_df'
 'gdiff' '_diff'
 'gdu' '_du'
-'geany' '_geany'
+'gegrep' '_grep'
 'gem' '_gem'
-'gem1.9' '_gem'
 'genisoimage' '_genisoimage'
+'genv' '_env'
 'get' '_sccs'
 'getafm' '_psutils'
 'getconf' '_getconf'
@@ -348,41 +353,46 @@ _comps=(
 'getfacl.exe' '_getfacl'
 'getfattr' '_attr'
 'getmail' '_getmail'
+'getopt' '_getopt'
 'getopts' '_vars'
 'gex' '_vim'
+'gexpand' '_unexpand'
+'gfgrep' '_grep'
 'gfind' '_find'
+'gfmt' '_fmt'
+'gfold' '_fold'
+'ggetopt' '_getopt'
+'ggrep' '_grep'
 'ggv' '_gnome-gv'
-'gh' '_github'
-'ghc' '_ghc'
-'ghci' '_ghc'
-'ghc-pkg' '_ghc'
+'ghead' '_head'
 'ghostscript' '_gs'
 'ghostview' '_pspdf'
 'gid' '_id'
-'gist' '_gist'
+'ginstall' '_install'
 'git' '_git'
 'git-cvsserver' '_git'
-'git-flow' '_git-flow'
-'github' '_github'
 'gitk' '_git'
-'git-pulls' '_git-pulls'
 'git-receive-pack' '_git'
 'git-shell' '_git'
 'git-upload-archive' '_git'
 'git-upload-pack' '_git'
-'git-wtf' '_git-wtf'
 'gjoin' '_join'
-'glances' '_glances'
+'glance' '_openstack'
 'gln' '_ln'
 'global' '_global'
+'glocate' '_locate'
 'gls' '_ls'
 'gm' '_graphicsmagick'
 'gmake' '_make'
 'gmd5sum' '_md5sum'
 'gmkdir' '_mkdir'
+'gmktemp' '_mktemp'
 'gmplayer' '_mplayer'
+'gmv' '_mv'
 'gnl' '_nl'
+'gnocchi' '_openstack'
 'gnome-gv' '_gnome-gv'
+'gnumfmt' '_numfmt'
 'gnupod_addsong' '_gnupod'
 'gnupod_addsong.pl' '_gnupod'
 'gnupod_check' '_gnupod'
@@ -393,15 +403,18 @@ _comps=(
 'gnupod_search.pl' '_gnupod'
 'gnutls-cli' '_gnutls'
 'gnutls-cli-debug' '_gnutls'
+'gnutls-serv' '_gnutls'
 'god' '_od'
 'gofmt' '_go'
-'google' '_google'
+'gpasswd' '_gpasswd'
+'gpaste' '_paste'
 'gpatch' '_patch'
 'gpg' '_gpg'
 'gpg2' '_gpg'
 'gpgv' '_gpg'
 'gpg-zip' '_gpg'
 'gphoto2' '_gphoto2'
+'gprintenv' '_printenv'
 'gprof' '_gprof'
 'gqview' '_gqview'
 'gradle' '_gradle'
@@ -410,6 +423,7 @@ _comps=(
 'grep' '_grep'
 'grepdiff' '_patchutils'
 'grm' '_rm'
+'grmdir' '_directories'
 'groff' '_groff'
 'groupadd' '_user_admin'
 'groupdel' '_groups'
@@ -421,12 +435,21 @@ _comps=(
 'gsdj' '_pspdf'
 'gsdj500' '_pspdf'
 'gsed' '_sed'
+'gseq' '_seq'
+'gsettings' '_gsettings'
 'gslj' '_pspdf'
 'gslp' '_pspdf'
 'gsnd' '_pspdf'
 'gsort' '_sort'
+'gsplit' '_split'
+'gstdbuf' '_stdbuf'
+'gstrings' '_strings'
+'gstty' '_stty'
+'gtail' '_tail'
 'gtar' '_tar'
-'gtk-launch' '_gtk-launch'
+'gtimeout' '_timeout'
+'gtouch' '_touch'
+'gtr' '_tr'
 'guilt' '_guilt'
 'guilt-add' '_guilt'
 'guilt-applied' '_guilt'
@@ -452,6 +475,8 @@ _comps=(
 'guilt-status' '_guilt'
 'guilt-top' '_guilt'
 'guilt-unapplied' '_guilt'
+'guname' '_uname'
+'gunexpand' '_unexpand'
 'guniq' '_uniq'
 'gunzip' '_gzip'
 'gv' '_gv'
@@ -459,58 +484,62 @@ _comps=(
 'gvim' '_vim'
 'gvimdiff' '_vim'
 'gwc' '_wc'
+'gwho' '_who'
 'gxargs' '_xargs'
 'gzcat' '_gzip'
+'gzegrep' '_grep'
+'gzfgrep' '_grep'
+'gzgrep' '_grep'
 'gzilla' '_webbrowser'
 'gzip' '_gzip'
 'hash' '_hash'
+'hd' '_hexdump'
 'head' '_head'
+'heat' '_openstack'
 'help' '_sccs'
-'heroku' '_heroku'
+'hexdump' '_hexdump'
 'hg' '_hg'
 'hilite' '_precommand'
 'history' '_fc'
-'hledger' '_hledger'
-'homestead' '_homestead'
 'host' '_hosts'
 'hostnamectl' '_hostnamectl'
 'hotjava' '_webbrowser'
-'http' '_httpie'
+'htop' '_htop'
 'hub' '_hub.zsh'
 'iceweasel' '_mozilla'
 'icombine' '_ispell'
 'iconv' '_iconv'
+'iconvconfig' '_iconvconfig'
 'id' '_id'
-'id3' '_id3'
-'id3v2' '_id3v2'
 'identify' '_imagemagick'
 'ifconfig' '_ifconfig'
 'ifdown' '_net_interfaces'
 'iftop' '_iftop'
 'ifup' '_net_interfaces'
 'ijoin' '_ispell'
-'img2sixel' '_img2sixel'
 'import' '_imagemagick'
 'inc' '_mh'
 'includeres' '_psutils'
 'info' '_texinfo'
 'infocmp' '_terminals'
 'initctl' '_initctl'
-'initdb' '_pgsql_utils'
 'insmod' '_modutils'
+'install' '_install'
 'install-info' '_texinfo'
 'integer' '_typeset'
 'interdiff' '_patchutils'
 'ionice' '_ionice'
+'iostat' '_iostat'
 'ip' '_ip'
 'ipset' '_ipset'
 'iptables' '_iptables'
 'iptables-restore' '_iptables'
 'iptables-save' '_iptables'
 'irb' '_ruby'
+'ironic' '_openstack'
 'irssi' '_irssi'
+'isag' '_sysstat'
 'ispell' '_ispell'
-'iw' '_iw'
 'iwconfig' '_iwconfig'
 'j' '_j'
 'jadetex' '_tex'
@@ -522,26 +551,23 @@ _comps=(
 'javah' '_java'
 'javap' '_java'
 'jdb' '_java'
-'jekyll' '_jekyll'
-'jmeter' '_jmeter'
-'jmeter-plugins' '_jmeter-plugins'
 'jobs' '_jobs_builtin'
 'joe' '_joe'
 'join' '_join'
-'jonas' '_jonas'
 'journalctl' '_journalctl'
 'jq' '_jq'
+'kdeconnect-cli' '_kdeconnect'
 'kernel-install' '_kernel-install'
+'keystone' '_openstack'
 'keytool' '_java'
 'kfmclient' '_kfmclient'
 'kill' '_kill'
 'killall' '_killall'
 'killall5' '_killall'
 'kioclient' '_kfmclient'
-'kitchen' '_kitchen'
-'knife' '_knife'
 'knock' '_knock'
 'konqueror' '_webbrowser'
+'kpartx' '_kpartx'
 'kpdf' '_pdf'
 'ksh' '_sh'
 'kvno' '_kvno'
@@ -549,32 +575,32 @@ _comps=(
 'lastb' '_last'
 'latex' '_tex'
 'latexmk' '_tex'
+'ldconfig' '_ldconfig'
+'ldconfig.real' '_ldconfig'
 'ldd' '_ldd'
-'lein' '_lein'
 'less' '_less'
 'let' '_math'
 'lftp' '_ncftp'
 'lha' '_lha'
 'light' '_webbrowser'
 'limit' '_limit'
-'lin' '_lunar'
 'links' '_links'
 'linux' '_uml'
 'lldb' '_lldb'
 'llvm-g++' '_gcc'
 'llvm-gcc' '_gcc'
+'llvm-objdump' '_objdump'
 'ln' '_ln'
 'loadkeys' '_loadkeys'
 'local' '_typeset'
+'locale' '_locale'
 'localectl' '_localectl'
+'localedef' '_localedef'
 'locate' '_locate'
 'log' '_nothing'
-'logger' '_logger'
 'loginctl' '_loginctl'
 'logname' '_nothing'
 'look' '_look'
-'lore' '_twisted'
-'losetup' '_losetup'
 'lp' '_lp'
 'lpadmin' '_lp'
 'lpinfo' '_lp'
@@ -583,22 +609,21 @@ _comps=(
 'lpr' '_lp'
 'lprm' '_lp'
 'lpstat' '_lp'
-'lrm' '_lunar'
 'ls' '_ls'
+'lsattr' '_lsattr'
+'lsblk' '_lsblk'
 'lsdiff' '_patchutils'
 'lsinitcpio' '_mkinitcpio'
 'lsmod' '_modutils'
 'lsof' '_lsof'
 'lsusb' '_lsusb'
-'lunar' '_lunar'
-'lunchy' '_lunchy'
-'lvu' '_lunar'
+'ltrace' '_ltrace'
 'lynx' '_lynx'
 'lzcat' '_xz'
 'lzma' '_xz'
 'lzop' '_lzop'
-'macgem' '_gem'
 'machinectl' '_machinectl'
+'magnum' '_openstack'
 'mail' '_mail'
 'Mail' '_mail'
 'mailx' '_mail'
@@ -607,7 +632,7 @@ _comps=(
 'makepkg' '_pacman'
 'man' '_man'
 'manage.py' '_django'
-'manhole' '_twisted'
+'manila' '_openstack'
 'mark' '_mh'
 '-math-' '_math'
 'matlab' '_matlab'
@@ -623,7 +648,7 @@ _comps=(
 'mencal' '_mencal'
 'mere' '_mere'
 'merge' '_rcs'
-'metaflac' '_metaflac'
+'metaflac' '_flac'
 'mformat' '_mtools'
 'mgv' '_pspdf'
 'mhfixmsg' '_mh'
@@ -634,13 +659,12 @@ _comps=(
 'mhpath' '_mh'
 'mhshow' '_mh'
 'mhstore' '_mh'
-'middleman' '_middleman'
 'mii-tool' '_mii-tool'
-'mina' '_mina'
-'mix' '_mix'
+'mistral' '_openstack'
 'mkdir' '_mkdir'
 'mkinitcpio' '_mkinitcpio'
 'mkisofs' '_growisofs'
+'mktemp' '_mktemp'
 'mktunes' '_gnupod'
 'mktunes.pl' '_gnupod'
 'mlabel' '_mtools'
@@ -653,6 +677,7 @@ _comps=(
 'modprobe' '_modutils'
 'module' '_module'
 'mogrify' '_imagemagick'
+'monasca' '_openstack'
 'mondoarchive' '_mondo'
 'montage' '_imagemagick'
 'moosic' '_moosic'
@@ -664,26 +689,23 @@ _comps=(
 'mozilla-xremote-client' '_mozilla'
 'mpc' '_mpc'
 'mplayer' '_mplayer'
+'mpstat' '_sysstat'
 'mrd' '_mtools'
 'mread' '_mtools'
 'mren' '_mtools'
-'msfconsole' '_msfconsole'
-'msfvenom' '_msfvenom'
 'msgchk' '_mh'
 'mt' '_mt'
 'mtn' '_monotone'
 'mtoolstest' '_mtools'
 'mtr' '_mtr'
 'mtype' '_mtools'
-'multirust' '_multirust'
 'munchlist' '_ispell'
 'mupdf' '_pdf'
+'murano' '_openstack'
 'mush' '_mail'
-'mussh' '_mussh'
 'mutt' '_mutt'
-'mux' '_tmuxinator'
-'mvn' '_mvn'
-'mvnDebug' '_mvn'
+'mv' '_mv'
+'mvim' '_vim'
 'mx' '_hosts'
 'mysql' '_mysql_utils'
 'mysqladmin' '_mysql_utils'
@@ -694,6 +716,7 @@ _comps=(
 'nail' '_mail'
 'native2ascii' '_java'
 'nautilus' '_nautilus'
+'nawk' '_awk'
 'nc' '_netcat'
 'ncal' '_cal'
 'ncftp' '_ncftp'
@@ -705,28 +728,30 @@ _comps=(
 'netctl-auto' '_netctl'
 'netrik' '_webbrowser'
 'netscape' '_netscape'
+'networkctl' '_networkctl'
+'neutron' '_openstack'
 'new' '_mh'
 'newgrp' '_groups'
 'next' '_mh'
+'ngrep' '_ngrep'
 'nice' '_nice'
-'ninja' '_ninja'
 'nkf' '_nkf'
 'nl' '_nl'
 'nm' '_nm'
 'nmap' '_nmap'
 'nmblookup' '_samba'
-'nmcli' '_nmcli'
+'nmcli' '_networkmanager'
 'nocorrect' '_precommand'
-'node' '_node'
 'noglob' '_precommand'
 'nohup' '_precommand'
 'notmuch' '_notmuch'
+'nova' '_openstack'
 'npm' '_npm'
 'ns' '_hosts'
 'nslookup' '_nslookup'
 'ntalk' '_other_accounts'
+'numfmt' '_numfmt'
 'nvim' '_vim'
-'nvm' '_nvm'
 'objdump' '_objdump'
 'od' '_od'
 'ogg123' '_vorbis'
@@ -734,10 +759,9 @@ _comps=(
 'oggenc' '_vorbis'
 'ogginfo' '_vorbis'
 'okular' '_okular'
-'openssl' '_openssl'
+'openstack' '_openstack'
 'opera' '_webbrowser'
 'opera-next' '_webbrowser'
-'optirun' '_optirun'
 'p4' '_perforce'
 'p4d' '_perforce'
 'pacat' '_pulseaudio'
@@ -748,13 +772,13 @@ _comps=(
 'pacman.static' '_pacman'
 'pacmd' '_pulseaudio'
 'pactl' '_pulseaudio'
-'pactree' '_pactree'
 'padsp' '_pulseaudio'
 'paplay' '_pulseaudio'
 '-parameter-' '_parameter'
 'parec' '_pulseaudio'
 'parecord' '_pulseaudio'
 'passwd' '_users'
+'paste' '_paste'
 'pasuspender' '_pulseaudio'
 'patch' '_patch'
 'pax' '_pax'
@@ -769,37 +793,32 @@ _comps=(
 'pdflatex' '_tex'
 'pdfopt' '_pdf'
 'pdftex' '_tex'
+'pdftexi2dvi' '_texinfo'
 'pdftk' '_pdftk'
 'pdftopbm' '_pdf'
 'pdftops' '_pdf'
 'pdftotext' '_pdf'
-'pear' '_pear'
-'perf' '_perf'
-'periscope' '_periscope'
 'perl' '_perl'
 'perldoc' '_perldoc'
 'pfiles' '_pids'
 'pflags' '_pids'
-'pg_dump' '_pgsql_utils'
-'pg_dumpall' '_pgsql_utils'
 'pgrep' '_pgrep'
-'pg_restore' '_pgsql_utils'
-'phing' '_phing'
 'php' '_php'
 'pick' '_mh'
+'picocom' '_picocom'
+'pidof' '_pidof'
+'pidstat' '_sysstat'
 'pigz' '_gzip'
 'pine' '_pine'
 'pinef' '_pine'
+'pinfo' '_texinfo'
 'ping' '_ping'
-'pixz' '_pixz'
-'pkcon' '_pkcon'
+'ping6' '_ping'
 'pkgadd' '_pkgadd'
 'pkg-config' '_pkg-config'
-'pkgfile' '_pkgfile'
 'pkginfo' '_pkginfo'
 'pkgrm' '_pkgrm'
 'pkill' '_pgrep'
-'play' '_play'
 'pldd' '_pids'
 'pmake' '_make'
 'pman' '_perl_modules'
@@ -820,7 +839,8 @@ _comps=(
 'policytool' '_java'
 'pon' '_pon'
 'popd' '_directory_stack'
-'port' '_port'
+'postconf' '_postfix'
+'postqueue' '_postfix'
 'postsuper' '_postfix'
 'prcs' '_prcs'
 'prev' '_mh'
@@ -847,7 +867,6 @@ _comps=(
 'psmerge' '_psutils'
 'psmulti' '_postscript'
 'psnup' '_psutils'
-'psql' '_pgsql_utils'
 'psresize' '_psutils'
 'psselect' '_psutils'
 'pstack' '_pids'
@@ -861,16 +880,14 @@ _comps=(
 'pushd' '_cd'
 'pwait' '_pids'
 'pwdx' '_pids'
-'pygmentize' '_pygmentize'
+'pwgen' '_pwgen'
 'pyhtmlizer' '_twisted'
 'qdbus' '_qdbus'
 'qiv' '_qiv'
 'quilt' '_quilt'
 'r' '_fc'
 'raggle' '_raggle'
-'rails' '_rails'
 'rake' '_rake'
-'ralio' '_ralio'
 'ranlib' '_ranlib'
 'rar' '_rar'
 'rc' '_sh'
@@ -881,8 +898,6 @@ _comps=(
 'read' '_read'
 'readelf' '_readelf'
 'readonly' '_typeset'
-'rebar' '_rebar'
-'rec' '_redis-cli'
 '-redirect-' '_redirect'
 '-redirect-,<,bunzip2' '_bzip2'
 '-redirect-,<,bzip2' '_bzip2'
@@ -897,7 +912,6 @@ _comps=(
 '-redirect-,<,unxz' '_xz'
 '-redirect-,<,xz' '_xz'
 '-redirect-,>,xz' '_xz'
-'redis-cli' '_redis-cli'
 'refile' '_mh'
 'rehash' '_hash'
 'reload' '_initctl'
@@ -906,11 +920,10 @@ _comps=(
 'repl' '_mh'
 'restart' '_initctl'
 'retawq' '_webbrowser'
-'rfkill' '_rfkill'
+'rg' '_rg'
 'rgview' '_vim'
 'rgvim' '_vim'
 'ri' '_ri'
-'rkt' '_rkt'
 'rlogin' '_rlogin'
 'rm' '_rm'
 'rmdel' '_sccs'
@@ -921,30 +934,29 @@ _comps=(
 'rmiregistry' '_java'
 'rmm' '_mh'
 'rmmod' '_modutils'
+'route' '_route'
 'rrdtool' '_rrdtool'
 'rsh' '_rlogin'
-'rspec' '_rspec'
 'rsync' '_rsync'
 'rtin' '_tin'
 'rubber' '_rubber'
 'rubber-info' '_rubber'
 'rubber-pipe' '_rubber'
-'rubocop' '_rubocop'
 'ruby' '_ruby'
+'ruby-mri' '_ruby'
 'run-help' '_run-help'
 'rup' '_hosts'
 'rusage' '_precommand'
 'rview' '_vim'
 'rvim' '_vim'
-'rvm' '_rvm'
 'rwho' '_hosts'
 'rxvt' '_urxvt'
 's2p' '_sed'
 'sabcmd' '_sablotron'
 'sact' '_sccs'
-'sbt' '_sbt'
-'scala' '_scala'
-'scalac' '_scala'
+'sadf' '_sysstat'
+'sahara' '_openstack'
+'sar' '_sysstat'
 'scan' '_mh'
 'sccs' '_sccs'
 'sccsdiff' '_sccs'
@@ -952,24 +964,26 @@ _comps=(
 'schedtool' '_schedtool'
 'scp' '_ssh'
 'screen' '_screen'
-'sdd' '_sdd'
+'script' '_script'
+'scriptreplay' '_script'
 'sed' '_sed'
+'senlin' '_openstack'
+'seq' '_seq'
 'serialver' '_java'
 'service' '_service'
 'set' '_set'
-'setcap' '_setcap'
 'setfacl' '_setfacl'
 'setfacl.exe' '_setfacl'
 'setfattr' '_attr'
 'setopt' '_setopt'
-'setup.py' '_setup.py'
+'setsid' '_precommand'
+'setxkbmap' '_setxkbmap'
 'sftp' '_ssh'
 'sh' '_sh'
 'shift' '_arrays'
 'show' '_mh'
 'showchar' '_psutils'
 'showmount' '_showmount'
-'showoff' '_showoff'
 'shutdown' '_shutdown'
 'sisu' '_sisu'
 'skipstone' '_webbrowser'
@@ -978,23 +992,21 @@ _comps=(
 'slogin' '_ssh'
 'slrn' '_slrn'
 'smartctl' '_smartmontools'
-'smartd' '_smartmontools'
 'smbclient' '_samba'
 'smbcontrol' '_samba'
 'smbstatus' '_samba'
 'soa' '_hosts'
-'socat' '_socat'
 'socket' '_socket'
 'sort' '_sort'
 'sortm' '_mh'
 'source' '_source'
 'spamassassin' '_spamassassin'
+'split' '_split'
 'splitdiff' '_patchutils'
 'sqlite' '_sqlite'
 'sqlite3' '_sqlite'
 'sqsh' '_sqsh'
 'sr' '_surfraw'
-'srm' '_srm'
 'srptool' '_gnutls'
 'ss' '_ss'
 'ssh' '_ssh'
@@ -1003,30 +1015,34 @@ _comps=(
 'ssh-copy-id' '_ssh'
 'sshfs' '_sshfs'
 'ssh-keygen' '_ssh'
-'stack' '_stack'
+'ssh-keyscan' '_ssh'
 'star' '_tar'
 'start' '_initctl'
 'stat' '_stat'
 'status' '_initctl'
+'stdbuf' '_stdbuf'
 'stg' '_stgit'
 'stop' '_initctl'
 'strace' '_strace'
+'strace64' '_strace'
 'strftime' '_strftime'
+'strings' '_strings'
 'strip' '_strip'
 'stty' '_stty'
 'su' '_su'
-'subliminal' '_subliminal'
+'subl' '_sublimetext'
 '-subscript-' '_subscript'
 'sudo' '_sudo'
 'sudoedit' '_sudo'
-'supervisorctl' '_supervisorctl'
 'surfraw' '_surfraw'
 'sv' '_runit'
-'svm' '_svm'
 'svn' '_subversion'
 'svnadmin' '_subversion'
 'svnadmin-static' '_subversion'
-'symfony' '_symfony'
+'svnlite' '_subversion'
+'swaks' '_swaks'
+'swift' '_swift'
+'swiftc' '_swift'
 'sync' '_nothing'
 'sysctl' '_sysctl'
 'systemctl' '_systemctl'
@@ -1045,15 +1061,11 @@ _comps=(
 'systemd-run' '_systemd-run'
 'systemd-tmpfiles' '_systemd-tmpfiles'
 'systemd-tty-ask-password-agent' '_systemd'
+'tacker' '_openstack'
 'tail' '_tail'
 'talk' '_other_accounts'
-'tap2deb' '_twisted'
-'tap2rpm' '_twisted'
-'tapconvert' '_twisted'
 'tar' '_tar'
 'tardy' '_tardy'
-'tarsnap' '_tarsnap'
-'task' '_task'
 'tcpdump' '_tcpdump'
 'tcp_open' '_tcpsys'
 'tcptraceroute' '_tcptraceroute'
@@ -1062,31 +1074,34 @@ _comps=(
 'tdd' '_devtodo'
 'tde' '_devtodo'
 'tdr' '_devtodo'
-'teamocil' '_teamocil'
 'telnet' '_telnet'
 'tex' '_tex'
+'texi2any' '_texinfo'
 'texi2dvi' '_texinfo'
+'texi2pdf' '_texinfo'
 'texindex' '_texinfo'
 'tg' '_topgit'
-'thor' '_thor'
 'tidy' '_tidy'
 'tig' '_git'
 '-tilde-' '_tilde'
 'time' '_precommand'
 'timedatectl' '_timedatectl'
+'timeout' '_timeout'
 'times' '_nothing'
 'tin' '_tin'
 'tkconch' '_twisted'
 'tkinfo' '_texinfo'
 'tla' '_tla'
 'tmux' '_tmux'
-'tmuxinator' '_tmuxinator'
 'todo' '_devtodo'
 'todo.sh' '_todo.sh'
 'toilet' '_toilet'
+'top' '_top'
 'totdconfig' '_totd'
+'touch' '_touch'
 'tpb' '_tpb'
 'tpconfig' '_tpconfig'
+'tput' '_tput'
 'tr' '_tr'
 'tracepath' '_tracepath'
 'tracepath6' '_tracepath'
@@ -1094,7 +1109,9 @@ _comps=(
 'trap' '_trap'
 'tree' '_tree'
 'trial' '_twisted'
+'trove' '_openstack'
 'true' '_nothing'
+'truss' '_truss'
 'tryaffix' '_ispell'
 'ttyctl' '_ttyctl'
 'tunctl' '_uml'
@@ -1102,12 +1119,12 @@ _comps=(
 'tunes2pod' '_gnupod'
 'tunes2pod.pl' '_gnupod'
 'twidge' '_twidge'
+'twist' '_twisted'
 'twistd' '_twisted'
 'txt' '_hosts'
 'type' '_which'
 'typeset' '_typeset'
 'udevadm' '_udevadm'
-'ufw' '_ufw'
 'ulimit' '_ulimit'
 'uml_mconsole' '_uml'
 'uml_moo' '_uml'
@@ -1146,8 +1163,6 @@ _comps=(
 'uzbl' '_uzbl'
 'uzbl-browser' '_uzbl'
 'uzbl-tabbed' '_uzbl'
-'vacuumdb' '_pgsql_utils'
-'vagrant' '_vagrant'
 'val' '_sccs'
 'valgrind' '_valgrind'
 '-value-' '_value'
@@ -1170,6 +1185,7 @@ _comps=(
 '-value-,LESSCHARSET,-default-' '_less'
 '-value-,LESS,-default-' '_less'
 '-value-,LPDEST,-default-' '_printers'
+'-value-,MPD_HOST,-default' '_mpc'
 '-value-,P4CLIENT,-default-' '_perforce'
 '-value-,P4MERGE,-default-' '_perforce'
 '-value-,P4PORT,-default-' '_perforce'
@@ -1199,29 +1215,29 @@ _comps=(
 '-value-,XZ_OPT,-default-' '_xz'
 'vared' '_vared'
 '-vared-' '_in_vared'
-'VBoxHeadless' '_virtualbox'
-'VBoxManage' '_virtualbox'
 'vcsh' '_vcsh'
-'veewee' '_veewee'
+'vifm' '_vifm'
 'vim' '_vim'
 'vimdiff' '_vim'
-'virsh' '_virsh'
+'virsh' '_libvirt'
+'virt-admin' '_libvirt'
+'virt-host-validate' '_libvirt'
+'virt-pki-validate' '_libvirt'
+'virt-xml-validate' '_libvirt'
+'vitrage' '_openstack'
 'vmstat' '_vmstat'
 'vncserver' '_vnc'
 'vncviewer' '_vnc'
-'vnstat' '_vnstat'
 'vorbiscomment' '_vorbiscomment'
-'vpnc' '_vpnc'
-'vpnc-connect' '_vpnc'
-'vpnc-disconnect' '_vpnc'
 'vserver' '_vserver'
 'vux' '_vux'
 'vuxctl' '_vux'
+'w' '_w'
 'w3m' '_w3m'
 'wait' '_wait'
 'watch' '_watch'
+'watcher' '_openstack'
 'wc' '_wc'
-'wemux' '_wemux'
 'wget' '_wget'
 'what' '_sccs'
 'whatis' '_man'
@@ -1229,16 +1245,19 @@ _comps=(
 'where' '_which'
 'whereis' '_whereis'
 'which' '_which'
+'who' '_who'
 'whoami' '_nothing'
 'whois' '_whois'
 'whom' '_mh'
 'wifi-menu' '_netctl'
 'wiggle' '_wiggle'
+'wipefs' '_wipefs'
 'wodim' '_cdrecord'
 'wpa_cli' '_wpa_cli'
 'write' '_users_on'
 'www' '_webbrowser'
 'xargs' '_xargs'
+'xattr' '_attr'
 'xauth' '_xauth'
 'xautolock' '_xautolock'
 'xclip' '_xclip'
@@ -1250,13 +1269,16 @@ _comps=(
 'xfd' '_x_utils'
 'xfig' '_xfig'
 'xfontsel' '_x_utils'
+'xfreerdp' '_rdesktop'
 'xhost' '_x_utils'
-'xinput' '_xinput'
 'xkill' '_x_utils'
 'xli' '_xloadimage'
 'xloadimage' '_xloadimage'
 'xlsatoms' '_x_utils'
+'xlsclients' '_x_utils'
+'xml' '_xmlstarlet'
 'xmllint' '_xmlsoft'
+'xmlstarlet' '_xmlstarlet'
 'xmms2' '_xmms2'
 'xmodmap' '_xmodmap'
 'xmosaic' '_webbrowser'
@@ -1286,8 +1308,7 @@ _comps=(
 'xxd' '_xxd'
 'xz' '_xz'
 'xzcat' '_xz'
-'yaourt' '_yaourt'
-'yaourt.static' '_yaourt'
+'yafc' '_yafc'
 'youtube-dl' '_youtube-dl'
 'ypbind' '_yp'
 'ypcat' '_yp'
@@ -1310,7 +1331,7 @@ _comps=(
 'zdelattr' '_zattr'
 'zdump' '_zdump'
 'zed' '_zed'
-'zegrep,' '_grep'
+'zegrep' '_grep'
 'zen' '_webbrowser'
 'zf_chgrp' '_chown'
 'zf_chown' '_chown'
@@ -1321,7 +1342,7 @@ _comps=(
 'zf_rmdir' '_directories'
 'zfs' '_zfs'
 'zgetattr' '_zattr'
-'zgrep,' '_grep'
+'zgrep' '_grep'
 'zip' '_zip'
 'zipinfo' '_zip'
 'zle' '_zle'
@@ -1340,11 +1361,14 @@ _comps=(
 'zstat' '_stat'
 'zstyle' '_zstyle'
 'ztodo' '_ztodo'
+'zun' '_openstack'
 'zxpdf' '_xpdf'
 )
 
 _services=(
 'bzcat' 'bunzip2'
+'gchgrp' 'chgrp'
+'gchown' 'chown'
 'gnupod_addsong.pl' 'gnupod_addsong'
 'gnupod_check.pl' 'gnupod_check'
 'gnupod_INIT.pl' 'gnupod_INIT'
@@ -1377,14 +1401,12 @@ _services=(
 'remsh' 'rsh'
 'slogin' 'ssh'
 'svnadmin-static' 'svnadmin'
+'svnlite' 'svn'
 'tunes2pod.pl' 'tunes2pod'
 'unlzma' 'unxz'
-'VBoxHeadless' 'vboxheadless'
-'VBoxManage' 'vboxmanage'
 'xelatex' 'latex'
 'xetex' 'tex'
 'xzcat' 'unxz'
-'yaourt.static' 'yaourt'
 'zf_chgrp' 'chgrp'
 'zf_chown' 'chown'
 )
@@ -1395,17 +1417,15 @@ _patcomps=(
 )
 
 _postpatcomps=(
-'(|cifs)iostat' '_sysstat'
-'isag' '_sysstat'
-'mpstat' '_sysstat'
+'c++-*' '_gcc'
+'g++-*' '_gcc'
+'gcc-*' '_gcc'
+'gem[0-9.]#' '_gem'
 '(p[bgpn]m*|*top[bgpn]m)' '_pbm'
-'pidstat' '_sysstat'
 'pydoc[0-9.]#' '_pydoc'
 'python[0-9.]#' '_python'
 'qemu(|-system-*)' '_qemu'
 '(ruby|[ei]rb)[0-9.]#' '_ruby'
-'sadf' '_sysstat'
-'sar' '_sysstat'
 '(texi(2*|ndex))' '_texi'
 '(tiff*|*2tiff|pal2rgb)' '_tiff'
 '-value-,(ftp|http(|s))_proxy,-default-' '_urls'
@@ -1452,209 +1472,151 @@ bindkey '^[,' _history-complete-newer
 bindkey '^[/' _history-complete-older
 bindkey '^[~' _bash_complete-word
 
-autoload -Uz _a2ps _aap _ack _acpi _acpitool \
-            _acroread _adb _add-zsh-hook _ag _alias \
-            _aliases _all_labels _all_matches _alternative _analyseplugin \
-            _android _ansible _ansible-galaxy _ansible-playbook _ansible-vault \
-            _ant _antigen _antiword _apachectl _apm \
-            _approximate _arch_archives _arch_namespace _arg_compile _arguments \
-            _arp _arping _arrays _artisan _assign \
-            _at _atach _attr _augeas _auto-auto-complete \
-            _autocd _awk _bash_completions _baz _beep \
-            _bind_addresses _bindkey _bison _bittorrent _bogofilter \
-            _bootctl _bower _bpython _brace_parameter _brctl \
-            _btrfs _builtin _bundle _busctl _bzip2 \
-            _bzr _cabal _cache_invalid _cal _calendar \
-            _call_function _canonical_paths _cap _cargo _cask \
-            _cat _ccal _cd _cdcd _cdr \
-            _cdrdao _cdrecord _celery _cheat _chkconfig \
-            _chmod _choc _chown _chrt _chsh \
-            _clay _cmake _cmdstring _cmp _coffee \
-            _combination _comm _command _command_names _compadd \
-            _compdef _complete _complete_debug _complete_help _complete_help_generic \
-            _complete_tag _comp_locale _composer _compress _condition \
-            _configure _console _coredumpctl _correct _correct_filename \
-            _correct_word _cowsay _cp _cpanm _cpio \
-            _cplay _cryptsetup _cssh _ctags_tags _curl \
-            _cut _cvs _dad _darcs _date \
-            _date_formats _dates _dbus _dcop _dd \
-            _debuild _default _delimiters _describe _description \
-            _devtodo _df _dget _dhclient _dhcpcd \
-            _diana _dict _dict_words _diff _diff_options \
-            _diffstat _directories _directory_stack _dir_list _dirs \
-            _disable _dispatch _ditz _django _dmidecode \
-            _docker _docker-machine _docpad _domains _drush \
-            _dsh _du _dvi _dynamic_directory_name _dzen2 \
-            _ecasound _echotc _echoti _elfdump _elinks \
-            _elm _email_addresses _emulate _emulator _enable \
-            _enscript _env _equal _espeak _etags \
-            _ethtool _expand _expand_alias _expand_word _exportfs \
-            _extensions _external_pwds _fab _fakeroot _fc \
-            _feh _fetchmail _ffmpeg _figlet _file_descriptors \
-            _files _file_systems _find _find_net_interfaces _finger \
-            _first _flasher _fleetctl _flex _fortune \
-            _fsh _functions _fuse_arguments _fuser _fusermount \
-            _fuse_values _gas _gcc _gcore _gdb \
-            _geany _gem _generic _genisoimage _getconf \
-            _getent _getfacl _getmail _ghc _gist \
-            _git _git-flow _github _git_log_prettily _git-pulls \
-            _git-wtf _glances _global _global_tags _globflags \
-            _globqual_delims _globquals _gnome-gv _gnu_generic _gnupod \
-            _gnutls _go _google _gpg _gphoto2 \
-            _gprof _gqview _gradle _graphicsmagick _grep \
-            _groff _groups _growisofs _gs _gtk-launch \
-            _guard _guilt _gv _gzip _hash \
-            _have_glob_qual _head _heroku _hg _history \
-            _history_complete_word _history_modifiers _hledger _homestead _hostnamectl \
-            _hosts _httpie _hub.zsh _iconv _id \
-            _id3 _id3v2 _ifconfig _iftop _ignored \
-            _imagemagick _img2sixel _initctl _init_d _in_vared \
-            _ionice _ip _ipset _iptables _irssi \
-            _ispell _iw _iwconfig _j _java \
-            _java_class _jekyll _jmeter _jmeter-plugins _jobs \
-            _jobs_bg _jobs_builtin _jobs_fg _joe _join \
-            _jonas _journalctl _jq _kernel-install _kfmclient \
-            _kill _killall _kitchen _knife _knock \
-            _kvno _language_codes _last _ldd _ld_debug \
-            _lein _less _lha _limit _limits \
-            _links _list _list_files _lldb _ln \
-            _loadkeys _localectl _locales _locate _logger \
-            _loginctl _look _losetup _lp _ls \
-            _lsof _lsusb _lunar _lunchy _lynx \
-            _lzop _machinectl _mail _mailboxes _main_complete \
-            _make _man _manage.py _match _math \
-            _math_params _matlab _md5sum _mdadm _mencal \
-            _menu _mere _message _metaflac _mh \
-            _middleman _mii-tool _mime_types _mina _mix \
-            _mkdir _mkinitcpio _module _module_math_func _modutils \
-            _mondo _monotone _moosic _mosh _most_recent_file \
-            _mount _mozilla _mpc _mplayer _msfconsole \
-            _msfvenom _mt _mtools _mtr _multi_parts \
-            _multirust _mussh _mutt _mvn _my_accounts \
-            _mysqldiff _mysql_utils _nautilus _ncftp _nedit \
-            _netcat _netctl _net_interfaces _netscape _newsgroups \
-            _next_label _next_tags _nice _ninja _nkf \
-            _nl _nm _nmap _nmcli _node \
-            _normal _nothing _notmuch _npm _nslookup \
-            _nvm _objdump _od _okular _oldlist \
-            _omz_diag_dump_check_core_commands _omz_diag_dump_echo_file_w_header _omz_diag_dump_one_big_text _omz_diag_dump_os_specific_version _openssl \
-            _options _options_set _options_unset _optirun _other_accounts \
-            _pack _pacman _pactree _parameter _parameters \
-            _patch _patchutils _path_commands _path_files _pax \
-            _pbm _pdf _pdftk _pear _perf \
-            _perforce _periscope _perl _perl_basepods _perldoc \
-            _perl_modules _pgrep _pgsql_utils _phing _php \
-            _pick_variant _pids _pine _ping _pixz \
-            _pkcon _pkgadd _pkg-config _pkgfile _pkginfo \
-            _pkg_instance _pkgrm _play _pon _port \
-            _ports _postfix _postscript _prcs _precommand \
-            _prefix _print _printenv _printers _prompt \
-            _prove _ps _ps1234 _pspdf _psutils \
-            _pulseaudio _pump _pydoc _pygmentize _python \
-            _python_modules _qdbus _qemu _qiv _quilt \
-            _raggle _rails _rake _ralio _ranlib \
-            _rar _rcs _rdesktop _read _read_comp \
-            _readelf _rebar _redirect _redis-cli _regex_arguments \
-            _regex_words _remote_files _renice _requested _retrieve_cache \
-            _rfkill _ri _rkt _rlogin _rm \
-            _rrdtool _rspec _rsync _rubber _rubocop \
-            _ruby _run-help _runit _rvm _sablotron \
-            _samba _sbt _scala _sccs _sched \
-            _schedtool _screen _sdd _sd_hosts_or_user_at_host _sd_machines \
-            _sd_outputmodes _sd_unit_files _sed _sep_parts _sequence \
-            _service _services _set _setcap _set_command \
-            _setfacl _setopt _setup _setup.py _sh \
-            _showmount _showoff _shutdown _signals _sisu \
-            _slrn _smartmontools _socat _socket _sort \
-            _source _spamassassin _sqlite _sqsh _srm \
-            _ss _ssh _ssh-copy-id _sshfs _stack \
-            _stat _stgit _store_cache _strace _strftime \
-            _strip _stty _su _sub_commands _subliminal \
-            _subscript _subversion _sudo _suffix_alias_files _supervisorctl \
-            _surfraw _svm _symfony _sysctl _sysstat \
-            _systemctl _systemd _systemd-analyze _systemd-delta _systemd-inhibit \
-            _systemd-nspawn _systemd-resolve _systemd-run _systemd-tmpfiles _tags \
-            _tail _tar _tar_archive _tardy _tarsnap \
-            _task _tcpdump _tcpsys _tcptraceroute _teamocil \
+autoload -Uz _hub.zsh _bootctl _busctl _cargo _coredumpctl \
+            _curl _docker _docker-compose _fd _hostnamectl \
+            _j _journalctl _kernel-install _localectl _loginctl \
+            _machinectl _mkinitcpio _netctl _networkctl _pacman \
+            _pulseaudio _rg _sd_hosts_or_user_at_host _sd_machines _sd_outputmodes \
+            _sd_unit_files _systemctl _systemd _systemd-analyze _systemd-delta \
+            _systemd-inhibit _systemd-nspawn _systemd-resolve _systemd-run _systemd-tmpfiles \
+            _timedatectl _udevadm _vifm _youtube-dl _cdr \
+            _all_labels _all_matches _alternative _approximate _arg_compile \
+            _arguments _bash_completions _cache_invalid _call_function _combination \
+            _complete _complete_debug _complete_help _complete_help_generic _complete_tag \
+            _comp_locale _correct _correct_filename _correct_word _describe \
+            _description _dispatch _expand _expand_alias _expand_word \
+            _extensions _external_pwds _generic _guard _history \
+            _history_complete_word _ignored _list _main_complete _match \
+            _menu _message _most_recent_file _multi_parts _next_label \
+            _next_tags _normal _nothing _oldlist _pick_variant \
+            _prefix _read_comp _regex_arguments _regex_words _requested \
+            _retrieve_cache _sep_parts _sequence _set_command _setup \
+            _store_cache _sub_commands _tags _user_expand _values \
+            _wanted _acpi _acpitool _analyseplugin _brctl \
+            _btrfs _chattr _chrt _cpupower _cryptsetup \
+            _ethtool _fuse_arguments _fusermount _fuse_values _gpasswd \
+            _htop _iconvconfig _ionice _ipset _iptables \
+            _iwconfig _kpartx _lsattr _lsblk _lsusb \
+            _ltrace _mdadm _mii-tool _modutils _mondo \
+            _networkmanager _pidof _qdbus _schedtool _ss \
+            _sshfs _strace _sysstat _tpb _tpconfig \
+            _tracepath _tune2fs _uml _valgrind _vserver \
+            _wakeup_capable_devices _wipefs _wpa_cli _a2ps _aap \
+            _absolute_command_paths _adb _ansible _ant _antiword \
+            _apachectl _apm _arch_archives _arch_namespace _arp \
+            _arping _at _attr _augeas _awk \
+            _basename _baudrates _baz _beep _bibtex \
+            _bind_addresses _bison _bittorrent _bogofilter _bpf_filters \
+            _bpython _bzip2 _bzr _cabal _cal \
+            _calendar _canonical_paths _cat _ccal _cdcd \
+            _cdrdao _cdrecord _chkconfig _chmod _chown \
+            _chsh _clay _cmdambivalent _cmdstring _cmp \
+            _column _comm _compress _configure _cowsay \
+            _cp _cpio _cplay _cscope _cssh \
+            _ctags_tags _curl _cut _cvs _darcs \
+            _date _date_formats _dates _dbus _dconf \
+            _dd _devtodo _df _dhclient _dict \
+            _dict_words _diff _diff_options _diffstat _dig \
+            _directories _dir_list _django _dmesg _dmidecode \
+            _dns_types _doas _domains _drill _dsh \
+            _du _dvi _ecasound _elfdump _elinks \
+            _elm _email_addresses _enscript _entr _env \
+            _espeak _etags _fakeroot _feh _fetchmail \
+            _ffmpeg _figlet _file_modes _files _file_systems \
+            _find _find_net_interfaces _finger _flac _flasher \
+            _flex _fmt _fold _fortune _fsh \
+            _fuser _gcc _gcore _gdb _gem \
+            _genisoimage _getconf _getent _getfacl _getmail \
+            _getopt _git _global _global_tags _gnu_generic \
+            _gnupod _gnutls _go _gpg _gphoto2 \
+            _gprof _gradle _graphicsmagick _grep _groff \
+            _groups _growisofs _gs _gsettings _guilt \
+            _gzip _have_glob_qual _head _hexdump _hg \
+            _hosts _iconv _id _ifconfig _iftop \
+            _imagemagick _initctl _init_d _install _iostat \
+            _ip _irssi _ispell _java _java_class \
+            _joe _join _jq _killall _knock \
+            _kvno _last _ldconfig _ldd _ld_debug \
+            _less _lha _libvirt _links _list_files \
+            _lldb _ln _loadkeys _locale _localedef \
+            _locales _locate _look _lp _ls \
+            _lsof _lynx _lzop _mail _mailboxes \
+            _make _man _md5sum _mencal _mh \
+            _mime_types _mkdir _mktemp _module _monotone \
+            _moosic _mosh _mount _mpc _mt \
+            _mtools _mtr _mutt _mv _my_accounts \
+            _mysqldiff _mysql_utils _ncftp _netcat _net_interfaces \
+            _newsgroups _ngrep _nice _nkf _nl \
+            _nm _nmap _notmuch _npm _nslookup \
+            _numfmt _objdump _object_files _od _openstack \
+            _other_accounts _pack _paste _patch _patchutils \
+            _path_commands _path_files _pax _pbm _pdf \
+            _perforce _perl _perl_basepods _perldoc _perl_modules \
+            _pgrep _php _picocom _pids _pine \
+            _ping _pkgadd _pkg-config _pkginfo _pkg_instance \
+            _pkgrm _pon _ports _postfix _postscript \
+            _prcs _printenv _printers _prove _ps \
+            _pspdf _psutils _pump _pwgen _pydoc \
+            _python _python_modules _qemu _quilt _raggle \
+            _rake _ranlib _rar _rcs _readelf \
+            _remote_files _renice _ri _rlogin _rm \
+            _route _rrdtool _rsync _rubber _ruby \
+            _runit _sablotron _samba _sccs _screen \
+            _script _sed _seq _service _services \
+            _setfacl _sh _showmount _shutdown _signals \
+            _sisu _slrn _smartmontools _socket _sort \
+            _spamassassin _split _sqlite _sqsh _ssh \
+            _ssh_hosts _stdbuf _stgit _strings _strip \
+            _stty _su _subversion _sudo _surfraw \
+            _swaks _swift _sys_calls _sysctl _tail \
+            _tar _tar_archive _tardy _tcpdump _tcptraceroute \
             _telnet _terminals _tex _texi _texinfo \
-            _thor _tidy _tiff _tilde _tilde_files \
-            _timedatectl _time_zone _tin _tla _tmux \
-            _tmuxinator _todo.sh _toilet _topgit _totd \
-            _tpb _tpconfig _tr _tracepath _trap \
-            _tree _ttyctl _ttys _tune2fs _twidge \
-            _twisted _typeset _udevadm _ufw _ulimit \
-            _uml _unace _uname _unexpand _unhash \
-            _uniq _unison _units _urls _urxvt \
-            _user_admin _user_at_host _user_expand _user_math_func _users \
-            _users_on _uzbl _vagrant _valgrind _value \
-            _values _vared _vars _vcsh _veewee \
-            _vim _virsh _virtualbox _vmstat _vnc \
-            _vnstat _vorbis _vorbiscomment _vpnc _vserver \
-            _vux _w3m _wait _wakeup_capable_devices _wanted \
-            _watch _wc _webbrowser _wemux _wget \
-            _whereis _which _whois _wiggle _wpa_cli \
-            _xargs _x_arguments _xauth _xautolock _x_borderwidth \
+            _tidy _tiff _tilde_files _timeout _time_zone \
+            _tin _tla _tmux _todo.sh _toilet \
+            _top _topgit _totd _touch _tput \
+            _tr _tree _truss _ttys _twidge \
+            _twisted _umountable _unace _uname _unexpand \
+            _uniq _unison _units _urls _user_admin \
+            _user_at_host _users _users_on _uzbl _vcsh \
+            _vim _vmstat _vorbis _vorbiscomment _vux \
+            _w _w3m _watch _wc _webbrowser \
+            _wget _whereis _who _whois _wiggle \
+            _xargs _xmlsoft _xmlstarlet _xmms2 _xxd \
+            _xz _yafc _yodl _yp _zcat \
+            _zdump _zfs _zfs_dataset _zfs_keysource_props _zfs_pool \
+            _zip _zpool _zsh _acroread _code \
+            _dcop _evince _gnome-gv _gqview _gv \
+            _kdeconnect _kfmclient _matlab _mozilla _mplayer \
+            _nautilus _nedit _netscape _okular _pdftk \
+            _qiv _rdesktop _setxkbmap _sublimetext _urxvt \
+            _vnc _x_arguments _xauth _xautolock _x_borderwidth \
             _xclip _x_color _x_colormapid _x_cursor _x_display \
             _xdvi _x_extension _xfig _x_font _xft_fonts \
-            _x_geometry _xinput _x_keysym _xloadimage _x_locale \
-            _xmlsoft _xmms2 _x_modifier _xmodmap _x_name \
-            _xournal _xpdf _xrandr _x_resource _xscreensaver \
-            _x_selection_timeout _xset _xt_arguments _xterm _x_title \
-            _xt_session_id _x_utils _xv _x_visual _x_window \
-            _xwit _xxd _xz _yaourt _yodl \
-            _youtube-dl _yp _zargs _zattr _zcalc \
-            _zcalc_line _zcat _zcompile _zdump _zed \
-            _zfs _zfs_dataset _zfs_keysource_props _zfs_pool _zftp \
-            _zip _zle _zmodload _zmv _zpool \
-            _zpty _zsh _zsh_highlight _zsh_highlight_apply_zle_highlight _zsh_highlight_bind_widgets \
-            _zsh_highlight_brackets_highlighter _zsh_highlight_brackets_highlighter_brackettype _zsh_highlight_brackets_highlighter_predicate _zsh_highlight_buffer_modified _zsh_highlight_call_widget \
-            _zsh_highlight_cursor_highlighter _zsh_highlight_cursor_highlighter_predicate _zsh_highlight_cursor_moved _zsh_highlight_line_highlighter _zsh_highlight_line_highlighter_predicate \
-            _zsh_highlight_load_highlighters _zsh_highlight_main_add_region_highlight _zsh_highlight_main_highlighter _zsh_highlight_main_highlighter_check_assign _zsh_highlight_main_highlighter_check_path \
-            _zsh_highlight_main_highlighter_expand_path _zsh_highlight_main_highlighter_highlight_dollar_string _zsh_highlight_main_highlighter_highlight_string _zsh_highlight_main_highlighter_predicate _zsh_highlight_main__type \
-            _zsh_highlight_pattern_highlighter _zsh_highlight_pattern_highlighter_loop _zsh_highlight_pattern_highlighter_predicate _zsh_highlight_preexec_hook _zsh_highlight_root_highlighter \
-            _zsh_highlight_root_highlighter_predicate _zsh_highlight_widget_accept-and-hold _zsh_highlight_widget_accept-and-infer-next-history _zsh_highlight_widget_accept-and-menu-complete _zsh_highlight_widget_accept-line \
-            _zsh_highlight_widget_accept-line-and-down-history _zsh_highlight_widget_accept-search _zsh_highlight_widget_argument-base _zsh_highlight_widget_auto-suffix-remove _zsh_highlight_widget_auto-suffix-retain \
-            _zsh_highlight_widget_backward-char _zsh_highlight_widget_backward-delete-char _zsh_highlight_widget_backward-delete-word _zsh_highlight_widget_backward-kill-line _zsh_highlight_widget_backward-kill-word \
-            _zsh_highlight_widget_backward-word _zsh_highlight_widget__bash_complete-word _zsh_highlight_widget__bash_list-choices _zsh_highlight_widget_beginning-of-buffer-or-history _zsh_highlight_widget_beginning-of-history \
-            _zsh_highlight_widget_beginning-of-line _zsh_highlight_widget_beginning-of-line-hist _zsh_highlight_widget_bracketed-paste _zsh_highlight_widget_capitalize-word _zsh_highlight_widget_clear-screen \
-            _zsh_highlight_widget__complete_debug _zsh_highlight_widget__complete_help _zsh_highlight_widget__complete_tag _zsh_highlight_widget_complete-word _zsh_highlight_widget_copy-prev-shell-word \
-            _zsh_highlight_widget_copy-prev-word _zsh_highlight_widget_copy-region-as-kill _zsh_highlight_widget__correct_filename _zsh_highlight_widget__correct_word _zsh_highlight_widget_deactivate-region \
-            _zsh_highlight_widget_delete-char _zsh_highlight_widget_delete-char-or-list _zsh_highlight_widget_delete-word _zsh_highlight_widget_describe-key-briefly _zsh_highlight_widget_digit-argument \
-            _zsh_highlight_widget_down-case-word _zsh_highlight_widget_down-history _zsh_highlight_widget_down-line _zsh_highlight_widget_down-line-or-beginning-search _zsh_highlight_widget_down-line-or-history \
-            _zsh_highlight_widget_down-line-or-search _zsh_highlight_widget_edit-command-line _zsh_highlight_widget_emacs-backward-word _zsh_highlight_widget_emacs-forward-word _zsh_highlight_widget_end-of-buffer-or-history \
-            _zsh_highlight_widget_end-of-history _zsh_highlight_widget_end-of-line _zsh_highlight_widget_end-of-line-hist _zsh_highlight_widget_end-of-list _zsh_highlight_widget_exchange-point-and-mark \
-            _zsh_highlight_widget_execute-last-named-cmd _zsh_highlight_widget_execute-named-cmd _zsh_highlight_widget__expand_alias _zsh_highlight_widget_expand-cmd-path _zsh_highlight_widget_expand-history \
-            _zsh_highlight_widget_expand-or-complete _zsh_highlight_widget_expand-or-complete-prefix _zsh_highlight_widget__expand_word _zsh_highlight_widget_expand-word _zsh_highlight_widget_forward-char \
-            _zsh_highlight_widget_forward-word _zsh_highlight_widget_get-line _zsh_highlight_widget_gosmacs-transpose-chars _zsh_highlight_widget_history-beginning-search-backward _zsh_highlight_widget_history-beginning-search-forward \
-            _zsh_highlight_widget__history-complete-newer _zsh_highlight_widget__history-complete-older _zsh_highlight_widget_history-incremental-pattern-search-backward _zsh_highlight_widget_history-incremental-pattern-search-forward _zsh_highlight_widget_history-incremental-search-backward \
-            _zsh_highlight_widget_history-incremental-search-forward _zsh_highlight_widget_history-search-backward _zsh_highlight_widget_history-search-forward _zsh_highlight_widget_infer-next-history _zsh_highlight_widget_insert-last-word \
-            _zsh_highlight_widget_kill-buffer _zsh_highlight_widget_kill-line _zsh_highlight_widget_kill-region _zsh_highlight_widget_kill-whole-line _zsh_highlight_widget_kill-word \
-            _zsh_highlight_widget_list-choices _zsh_highlight_widget_list-expand _zsh_highlight_widget__list_expansions _zsh_highlight_widget_magic-space _zsh_highlight_widget_menu-complete \
-            _zsh_highlight_widget_menu-expand-or-complete _zsh_highlight_widget_menu-select _zsh_highlight_widget__most_recent_file _zsh_highlight_widget_neg-argument _zsh_highlight_widget__next_tags \
-            _zsh_highlight_widget_overwrite-mode _zsh_highlight_widget_pound-insert _zsh_highlight_widget_push-input _zsh_highlight_widget_push-line _zsh_highlight_widget_push-line-or-edit \
-            _zsh_highlight_widget_put-replace-selection _zsh_highlight_widget_quoted-insert _zsh_highlight_widget_quote-line _zsh_highlight_widget_quote-region _zsh_highlight_widget_read-command \
-            _zsh_highlight_widget__read_comp _zsh_highlight_widget_recursive-edit _zsh_highlight_widget_redisplay _zsh_highlight_widget_redo _zsh_highlight_widget_reset-prompt \
-            _zsh_highlight_widget_reverse-menu-complete _zsh_highlight_widget_select-a-blank-word _zsh_highlight_widget_select-a-shell-word _zsh_highlight_widget_select-a-word _zsh_highlight_widget_select-in-blank-word \
-            _zsh_highlight_widget_select-in-shell-word _zsh_highlight_widget_select-in-word _zsh_highlight_widget_self-insert _zsh_highlight_widget_self-insert-unmeta _zsh_highlight_widget_send-break \
-            _zsh_highlight_widget_set-mark-command _zsh_highlight_widget_spell-word _zsh_highlight_widget_split-undo _zsh_highlight_widget_sudo-command-line _zsh_highlight_widget_transpose-chars \
-            _zsh_highlight_widget_transpose-words _zsh_highlight_widget_undefined-key _zsh_highlight_widget_undo _zsh_highlight_widget_universal-argument _zsh_highlight_widget_up-case-word \
-            _zsh_highlight_widget_up-history _zsh_highlight_widget_up-line _zsh_highlight_widget_up-line-or-beginning-search _zsh_highlight_widget_up-line-or-history _zsh_highlight_widget_up-line-or-search \
-            _zsh_highlight_widget_vi-add-eol _zsh_highlight_widget_vi-add-next _zsh_highlight_widget_vi-backward-blank-word _zsh_highlight_widget_vi-backward-blank-word-end _zsh_highlight_widget_vi-backward-char \
-            _zsh_highlight_widget_vi-backward-delete-char _zsh_highlight_widget_vi-backward-kill-word _zsh_highlight_widget_vi-backward-word _zsh_highlight_widget_vi-backward-word-end _zsh_highlight_widget_vi-beginning-of-line \
-            _zsh_highlight_widget_vi-caps-lock-panic _zsh_highlight_widget_vi-change _zsh_highlight_widget_vi-change-eol _zsh_highlight_widget_vi-change-whole-line _zsh_highlight_widget_vi-cmd-mode \
-            _zsh_highlight_widget_vi-delete _zsh_highlight_widget_vi-delete-char _zsh_highlight_widget_vi-digit-or-beginning-of-line _zsh_highlight_widget_vi-down-line-or-history _zsh_highlight_widget_vi-end-of-line \
-            _zsh_highlight_widget_vi-fetch-history _zsh_highlight_widget_vi-find-next-char _zsh_highlight_widget_vi-find-next-char-skip _zsh_highlight_widget_vi-find-prev-char _zsh_highlight_widget_vi-find-prev-char-skip \
-            _zsh_highlight_widget_vi-first-non-blank _zsh_highlight_widget_vi-forward-blank-word _zsh_highlight_widget_vi-forward-blank-word-end _zsh_highlight_widget_vi-forward-char _zsh_highlight_widget_vi-forward-word \
-            _zsh_highlight_widget_vi-forward-word-end _zsh_highlight_widget_vi-goto-column _zsh_highlight_widget_vi-goto-mark _zsh_highlight_widget_vi-goto-mark-line _zsh_highlight_widget_vi-history-search-backward \
-            _zsh_highlight_widget_vi-history-search-forward _zsh_highlight_widget_vi-indent _zsh_highlight_widget_vi-insert _zsh_highlight_widget_vi-insert-bol _zsh_highlight_widget_vi-join \
-            _zsh_highlight_widget_vi-kill-eol _zsh_highlight_widget_vi-kill-line _zsh_highlight_widget_vi-match-bracket _zsh_highlight_widget_vi-open-line-above _zsh_highlight_widget_vi-open-line-below \
-            _zsh_highlight_widget_vi-oper-swap-case _zsh_highlight_widget_vi-pound-insert _zsh_highlight_widget_vi-put-after _zsh_highlight_widget_vi-put-before _zsh_highlight_widget_vi-quoted-insert \
-            _zsh_highlight_widget_vi-repeat-change _zsh_highlight_widget_vi-repeat-find _zsh_highlight_widget_vi-repeat-search _zsh_highlight_widget_vi-replace _zsh_highlight_widget_vi-replace-chars \
-            _zsh_highlight_widget_vi-rev-repeat-find _zsh_highlight_widget_vi-rev-repeat-search _zsh_highlight_widget_vi-set-buffer _zsh_highlight_widget_vi-set-mark _zsh_highlight_widget_visual-line-mode \
-            _zsh_highlight_widget_visual-mode _zsh_highlight_widget_vi-substitute _zsh_highlight_widget_vi-swap-case _zsh_highlight_widget_vi-undo-change _zsh_highlight_widget_vi-unindent \
-            _zsh_highlight_widget_vi-up-line-or-history _zsh_highlight_widget_vi-yank _zsh_highlight_widget_vi-yank-eol _zsh_highlight_widget_vi-yank-whole-line _zsh_highlight_widget_what-cursor-position \
-            _zsh_highlight_widget_where-is _zsh_highlight_widget_yank-pop _zsh_highlight_widget_zle-keymap-select _zsh_highlight_widget_zle-line-finish _zsh_highlight_widget_zle-line-init \
-            _zsh-mime-handler _zsocket _zstyle _ztodo
+            _x_geometry _x_keysym _xloadimage _x_locale _x_modifier \
+            _xmodmap _x_name _xournal _xpdf _xrandr \
+            _x_resource _xscreensaver _x_selection_timeout _xset _xt_arguments \
+            _xterm _x_title _xt_session_id _x_utils _xv \
+            _x_visual _x_window _xwit _add-zle-hook-widget _add-zsh-hook \
+            _alias _aliases _arrays _assign _autocd \
+            _bindkey _brace_parameter _builtin _cd _command \
+            _command_names _compadd _compdef _completers _condition \
+            _default _delimiters _directory_stack _dirs _disable \
+            _dynamic_directory_name _echotc _echoti _emulate _enable \
+            _equal _fc _file_descriptors _first _functions \
+            _globflags _globqual_delims _globquals _hash _history_modifiers \
+            _in_vared _jobs _jobs_bg _jobs_builtin _jobs_fg \
+            _kill _limit _limits _math _math_params \
+            _mere _module_math_func _options _options_set _options_unset \
+            _parameter _parameters _precommand _print _prompt \
+            _ps1234 _read _redirect _run-help _sched \
+            _set _setopt _source _stat _strftime \
+            _subscript _suffix_alias_files _tcpsys _tilde _trap \
+            _ttyctl _typeset _ulimit _unhash _user_math_func \
+            _value _vared _vars _wait _which \
+            _widgets _zargs _zattr _zcalc _zcalc_line \
+            _zcompile _zed _zftp _zle _zmodload \
+            _zmv _zpty _zsh-mime-handler _zsocket _zstyle \
+            _ztodo
 autoload -Uz +X _call_program
 
 typeset -gUa _comp_assocs
