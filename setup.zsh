@@ -48,7 +48,7 @@ RPROMPT='${vim_mode} ${vcs_info_msg_0_}'
 # Completion
 ##
 autoload -U compinit
-compinit
+compinit -i
 zmodload -i zsh/complist
 setopt hash_list_all            # hash everything before completion
 setopt completealiases          # complete alisases

@@ -4,6 +4,17 @@ function aujourdhui () {
     LC_ALL=fr_CA.UTF-8 date +"\%e \%b \%Y"
 }
 
+function ls_or_cat() {
+    file=${1:-.}
+    out=$(stat $file | head -2 | tail -1)
+    if [[ $out == *"directory" ]]
+    then
+        ls --group-directories-first --color=always $file
+    else
+        cat $file
+    fi
+}
+
 # Welcome message
 function welcome() {
     LC_ALL=fr_CA.UTF-8 date +"%e %b"

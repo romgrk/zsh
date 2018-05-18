@@ -28,7 +28,7 @@ export FZF_DEFAULT_OPTS='--inline-info
 --color hl:164,info:202,prompt:196,header:190
 --bind alt-j:down,alt-k:up,tab:up
 --bind alt-u:page-up,alt-d:page-down
---bind ctrl-u:kill-line,ctrl-d:page-down
+--bind ctrl-u:unix-line-discard,ctrl-d:page-down
 --bind alt-s:toggle-sort
 --bind alt-i:ignore
 --bind ";:execute(less {})"

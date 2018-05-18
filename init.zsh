@@ -4,7 +4,7 @@
 
 source $HOME/.profile
 
-export fpath=($HOME/var/zsh $fpath)
+export fpath=($HOME/.cache/zsh $fpath)
 
 export HISTFILE="$ZSHDOT/.history"
 export ZSH_ALIASES="$ZSHDOT/aliases.zsh"
@@ -28,7 +28,7 @@ COLORS=true #default
 
 # Zsh options
 source "$ZSHDOT/setup.zsh"
-
+autoload -U zmv
 
 # Plugins
 source "$ZSHDOT/antigen/antigen.zsh"
@@ -40,7 +40,7 @@ antigen bundles <<EOB
     t413/zsh-background-notify
     zsh-users/zsh-completions
     zsh-users/zsh-syntax-highlighting
-    # "zsh-users/zsh-autosuggestions"
+    zsh-users/zsh-autosuggestions
 EOB
 antigen apply
 
@@ -73,3 +73,5 @@ source "$ZSHDOT/aliases.zsh"
 
 unset -f nmap
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
