@@ -1,18 +1,18 @@
 # Setup fzf
 # ---------
-if [[ ! "$PATH" == */home/romgrk/.local/fzf/bin* ]]; then
-  export PATH="$PATH:/home/romgrk/.local/fzf/bin"
+if [[ ! "$PATH" == *$HOME/.local/fzf/bin* ]]; then
+  export PATH="$PATH:$HOME/.local/fzf/bin"
 fi
 
 # Man path
 # --------
-if [[ ! "$MANPATH" == */home/romgrk/.local/fzf/man* && -d "/home/romgrk/.local/fzf/man" ]]; then
-  export MANPATH="$MANPATH:/home/romgrk/.local/fzf/man"
+if [[ ! "$MANPATH" == *$HOME/.local/fzf/man* && -d "$HOME/.local/fzf/man" ]]; then
+  export MANPATH="$MANPATH:$HOME/.local/fzf/man"
 fi
 
 # Auto-completion
 # ---------------
-[[ $- == *i* ]] && source "/home/romgrk/.local/fzf/shell/completion.zsh" 2> /dev/null
+[[ $- == *i* ]] && source "$HOME/.local/fzf/shell/completion.zsh" 2> /dev/null
 
 
 # FIXME for colors

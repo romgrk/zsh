@@ -72,6 +72,3 @@ source "$ZSHDOT/aliases.zsh"
 #[[ $COLORTERM == 'rox-term' ]]           && source $ZSHDOT/term/roxterm.zsh
 
 unset -f nmap
-
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
