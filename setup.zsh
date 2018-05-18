@@ -1,7 +1,9 @@
 
+autoload -U zmv
+
 autoload -U colors zsh-mime-setup select-word-style
 colors          # colors
-zsh-mime-setup  # run everything as if it's an executable
+zsh-mime-setup  # run everything as if it's an executable
 select-word-style bash # ctrl+w on words
 
 ##
@@ -51,10 +53,11 @@ autoload -U compinit
 compinit -i
 zmodload -i zsh/complist
 setopt hash_list_all            # hash everything before completion
-setopt completealiases          # complete alisases
+setopt completealiases          # complete aliases
 setopt always_to_end            # when completing from the middle of a word, move the cursor to the end of the word
 setopt complete_in_word         # allow completion from within a word/phrase
 setopt list_ambiguous           # complete as much of a completion until it gets ambiguous.
+setopt menu_complete            # Insert first item on tab
 
 zstyle ':completion::complete:*' use-cache on               # completion caching, use rehash to clear
 zstyle ':completion:*' cache-path ~/.zsh/cache              # cache path
@@ -90,7 +93,7 @@ setopt auto_pushd               # make cd push old dir in dir stack
 setopt pushd_ignore_dups        # no duplicates in dir stack
 setopt pushd_silent             # no dir stack after pushd or popd
 setopt pushd_to_home            # `pushd` = `pushd $HOME`
-#
+
 ##
 # History
 ##
@@ -102,7 +105,7 @@ setopt hist_ignore_all_dups     # no duplicate
 setopt hist_ignore_space        # ignore space prefixed commands
 setopt hist_reduce_blanks       # trim blanks
 setopt hist_verify              # show before executing history commands
-setopt inc_append_history       # add commands as they are typed, don't wait until shell exit
+setopt inc_append_history       # add commands as they are typed, dont wait until shell exit
 setopt share_history            # share hist between sessions
 setopt bang_hist                # !keyword
 

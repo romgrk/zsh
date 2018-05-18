@@ -26,10 +26,6 @@ COLORS=true #default
 ### SECTION: Init sequence {1
 
 
-# Zsh options
-source "$ZSHDOT/setup.zsh"
-autoload -U zmv
-
 # Plugins
 source "$ZSHDOT/antigen/antigen.zsh"
 antigen use oh-my-zsh
@@ -46,8 +42,8 @@ antigen apply
 
 eval "$(fasd --init auto)"
 source "$ZSHDOT/plugins/fzf.zsh"
-
 compdef g=hub
+
 
 # Scripts
 source "$ZSHDOT/functions.zsh"
@@ -59,6 +55,10 @@ source "$ZSHDOT/editor.zsh"
 # source "$ZSHDOT/prompt.zsh"
 source "$ZSHDOT/promptline.sh"
 
+# Options
+source "$ZSHDOT/setup.zsh"
+
+# Keymap & aliases
 source "$ZSHDOT/keymap.zsh"
 source "$ZSHDOT/aliases.zsh"
 
