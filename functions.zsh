@@ -8,6 +8,15 @@ function aujourdhui () {
     LC_ALL=fr_CA.UTF-8 date +"\%e \%b \%Y"
 }
 
+function inplace () {
+    executable=${@:1:-1}
+    file=${@: -1}
+    out=$(eval $executable < $file)
+    if [ $? -eq 0 ]; then
+        echo $out > $file
+    fi
+}
+
 function ls_or_cat() {
     file=${1:-.}
     out=$(stat $file | head -2 | tail -1)
