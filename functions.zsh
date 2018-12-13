@@ -17,6 +17,14 @@ function inplace () {
     fi
 }
 
+function find-port-usage () {
+    sudo netstat -nlp | grep  $1 | awk '{ print $7 }' | sed 's/\/.*//' | head -1
+}
+
+function kill-process-using-port () {
+    kill $(find-port-usage $1 | awk '{ print $7 }' | sed 's/\/.*//' | head -1)
+}
+
 function ls_or_cat() {
     file=${1:-.}
     out=$(stat $file | head -2 | tail -1)
