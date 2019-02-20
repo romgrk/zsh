@@ -2,8 +2,6 @@
 
 ### SECTION: Globals {1
 
-source $HOME/.profile
-
 export fpath=($HOME/.cache/zsh $fpath)
 
 export HISTFILE="$ZSHDOT/.history"
@@ -35,15 +33,13 @@ antigen bundles <<EOB
     horosgrisa/autoenv
     t413/zsh-background-notify
     zsh-users/zsh-completions
-    zsh-users/zsh-syntax-highlighting
+    zdharma/fast-syntax-highlighting
     zsh-users/zsh-autosuggestions
 EOB
 antigen apply
+# zsh-users/zsh-syntax-highlighting
 
-eval "$(fasd --init auto)"
-source "$ZSHDOT/plugins/fzf.zsh"
 compdef g=hub
-
 
 # Scripts
 source "$ZSHDOT/functions.zsh"
@@ -62,6 +58,10 @@ source "$ZSHDOT/setup.zsh"
 source "$ZSHDOT/keymap.zsh"
 source "$ZSHDOT/aliases.zsh"
 
+# Other programs
+eval `fnm env --multi`
+eval "$(fasd --init auto)"
+source "$ZSHDOT/plugins/fzf.zsh"
 
 
 ### SECTION: Terminal specific settings {1
