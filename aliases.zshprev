@@ -141,4 +141,12 @@ alias ssh-dev="killall ssh; ssh -N -f -L 5432:127.0.0.1:5432 rgregoir@bravodevap
 alias find-port-usage="sudo netstat -nlp | grep "
 alias find-port-usage="sudo netstat -nlp | grep "
 alias cat="bat"
-alias catt="alias catt="\cat"
+alias catt='\cat'
+alias preview="fzf --preview 'bat --color "always" {}'"
+alias rebuild-edcc="ssh ihec-dev.vhost38 'cd /home/ihec/edcc/source_code/edcc_portal/ihec/ && git pull && npm run build && sudo systemctl restart ihec'"
+alias refresh-edcc="ssh ihec-dev.vhost38 'cd /home/ihec/edcc/source_code/edcc_portal/ihec/ && git pull && sudo systemctl restart ihec'"
+alias rebuild-triton="ssh legacyportaldev.genome.mcgill.ca 'cd /home/rgregoir/workspace/mugc_data_portal && git pull && npm run build && sudo systemctl restart triton'"
+alias rebuild-varwig="ssh legacyportaldev.genome.mcgill.ca 'cd /opt/varwig/ && git pull && npm i && npm run build && sudo systemctl restart varwig'"
+alias gg="lazygit"
+alias stop='sudo systemctl stop'
+alias start='sudo systemctl start'

@@ -2,7 +2,6 @@ alias _=sudo
 
 alias ls="ls --group-directories-first --color=always"
 alias la="ls -vA"
-alias ll='ls -lhG'
 alias lla='ls -lhvGA'
 alias lsf='ls -l | fzf --preview="echo user={3} when={-4..-2}; cat {-1}" --header-lines=1'
 
@@ -141,5 +140,19 @@ alias ssh-dev="killall ssh; ssh -N -f -L 5432:127.0.0.1:5432 rgregoir@bravodevap
 alias find-port-usage="sudo netstat -nlp | grep "
 alias find-port-usage="sudo netstat -nlp | grep "
 alias cat="bat"
-alias catt="\cat"
+alias catt='\cat'
 alias preview="fzf --preview 'bat --color "always" {}'"
+alias rebuild-edcc="ssh ihec-dev.vhost38 'cd /home/ihec/edcc/source_code/edcc_portal/ihec/ && git pull && npm run build && sudo systemctl restart ihec'"
+alias refresh-edcc="ssh ihec-dev.vhost38 'cd /home/ihec/edcc/source_code/edcc_portal/ihec/ && git pull && sudo systemctl restart ihec'"
+alias rebuild-triton="ssh legacyportaldev.genome.mcgill.ca 'cd /home/rgregoir/workspace/mugc_data_portal && git pull && npm run build && sudo systemctl restart triton'"
+alias rebuild-varwig="ssh legacyportaldev.genome.mcgill.ca 'cd /opt/varwig/ && git pull && npm i && npm run build && sudo systemctl restart varwig'"
+alias gg="lazygit"
+alias stop='sudo systemctl stop'
+alias start='sudo systemctl start'
+alias ll='exa --long --group-directories-first'
+alias copy-clarity-password="cat ~/documents/pwd.txt | clip"
+alias npm-set-prefix="npm config set prefix /home/rgregoir/.cache/npm-global"
+alias npm-set-prefix="npm config set prefix /home/rgregoir/.cache/npm-global"
+alias npm-delete-prefix="npm config delete prefix"
+alias gdb-run='gdb -ex run --args'
+alias git-discard='git checkout -f --'
