@@ -59,8 +59,9 @@ source "$ZSHDOT/keymap.zsh"
 source "$ZSHDOT/aliases.zsh"
 
 # Other programs
-eval `fnm env --multi`
+# eval `fnm env --multi`
 eval "$(fasd --init auto)"
+unalias sd
 source "$ZSHDOT/plugins/fzf.zsh"
 
 
@@ -73,9 +74,17 @@ source "$ZSHDOT/plugins/fzf.zsh"
 
 unset -f nmap
 
+### SECTION: Local settings {1
+
+if [ -f "$HOME/.local.zshrc" ]; then
+    source "$HOME/.local.zshrc"
+fi
+
+
 # Run commands
 if [[ $1 == eval ]]
 then
     "$@"
 set --
 fi
+
