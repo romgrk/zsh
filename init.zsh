@@ -63,6 +63,7 @@ source "$ZSHDOT/aliases.zsh"
 eval "$(fasd --init auto)"
 unalias sd
 source "$ZSHDOT/plugins/fzf.zsh"
+source "$ZSHDOT/plugins/man.zsh"
 
 
 ### SECTION: Terminal specific settings {1
@@ -87,4 +88,5 @@ then
     "$@"
 set --
 fi
+
 
