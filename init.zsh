@@ -8,8 +8,8 @@ export HISTFILE="$ZSHDOT/.history"
 export ZSH_ALIASES="$ZSHDOT/aliases.zsh"
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=248'
 
-[[ -f $CONFIG/less_termcap ]] && source "$CONFIG/less_termcap"
-[[ -f $CONFIG/dircolors ]]    && eval "$(dircolors $CONFIG/dircolors)"
+[[ -f $XDG_CONFIG_HOME/less_termcap ]] && source "$XDG_CONFIG_HOME/less_termcap"
+[[ -f $XDG_CONFIG_HOME/dircolors ]]    && eval "$(dircolors $XDG_CONFIG_HOME/dircolors)"
 
 
 # Autoenv options
