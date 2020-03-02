@@ -18,9 +18,7 @@ alias calc='noglob calc'
 
 alias git="hub"
 alias gk="git checkout"
-alias clone="git clone"
 alias gst='git status'
-alias amen='git commit --amen'
 alias glogline="git log --oneline"
 alias gds='git diff --staged'
 alias gss='git stash'
@@ -49,6 +47,9 @@ alias pssort="_ ps aux | sort -k3"
 
 alias ji="j -i"
 alias jd="j -d"
+
+function rg () { command rg --pretty $@ | less -F }
+function hexyl () { command hexyl $@ | less -F }
 
 alias pac='pacman -S'
 alias pacr='pacman -R'
@@ -117,7 +118,7 @@ alias xml-format='xmllint --format -'
 alias rg-ls='rg --files-with-matches'
 alias docker-compose='sudo docker-compose'
 alias apti='sudo apt-get install'
-alias apts='apt-cache search'
+function apts () { apt-cache search $1 | less -F }
 alias rg-ls='rg --files-with-matches'
 alias clip='xsel -b -i'
 alias put='xsel -b'
@@ -136,7 +137,7 @@ alias activate='source ./env/bin/activate'
 alias aptp='apt-cache policy'
 alias gdbrun='gdb -ex run --args'
 alias ssh-test="killall ssh; ssh -N -f -L 5432:127.0.0.1:5432 rgregoir@bravotestapp.genome.mcgill.ca"
-alias ssh-dev="killall ssh; ssh -N -f -L 5432:127.0.0.1:5432 rgregoir@bravodevapp.genome.mcgill.ca"
+alias ssh-dev="copy-genome-password && killall ssh; ssh -N -f -L 5432:127.0.0.1:5432 rgregoir@bravodevapp.genome.mcgill.ca"
 alias find-port-usage="sudo netstat -nlp | grep "
 alias find-port-usage="sudo netstat -nlp | grep "
 alias cat="bat"
@@ -156,3 +157,17 @@ alias npm-set-prefix="npm config set prefix /home/rgregoir/.cache/npm-global"
 alias npm-delete-prefix="npm config delete prefix"
 alias gdb-run='gdb -ex run --args'
 alias git-discard='git checkout -f --'
+alias path='echo $PATH | sed -e "s/:/\n/g"'
+alias copy-it-password="cat ~/documents/it-password.txt | clip"
+alias configure-debug='./configure CFLAGS="-ggdb3 -O0" CXXFLAGS="-ggdb3 -O0" LDFLAGS="-ggdb3"'
+alias rrm="/bin/rm"
+alias get-magic-token='curl -k --user c3cHva2-fFmWaxJt8KsbUw..:zh-1h8thUsz2z2GL0PmScg.. --data "grant_type=client_credentials" https://medbeta.medicine.mcgill.ca/ords-uat/genome/oauth/token 2>/dev/null | fx ".access_token"'
+alias amen='git commit --ammend --no-edit'
+alias triton-reset-download-db="rm ./data/downloads.db && sqlite3 ./data/downloads.db < ./schemas/downloads.sql"
+alias copy-genome-password="cat ~/documents/genome-pwd.txt | clip"
+alias rgi='rg -i'
+alias npx-prettier-write='npx prettier --write'
+alias npx-prettier-write-all-js="npx-prettier-write src/**/*.js"
+alias status='sudo systemctl status'
+alias clone="git clone $(put)"
+alias keycloak="/opt/keycloak-9.0.0/bin/standalone.sh"
