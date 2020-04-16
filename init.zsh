@@ -8,9 +8,6 @@ export HISTFILE="$ZSHDOT/.history"
 export ZSH_ALIASES="$ZSHDOT/aliases.zsh"
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=248'
 
-[[ -f $XDG_CONFIG_HOME/less_termcap ]] && source "$XDG_CONFIG_HOME/less_termcap"
-[[ -f $XDG_CONFIG_HOME/dircolors ]]    && eval "$(dircolors $XDG_CONFIG_HOME/dircolors)"
-
 
 # Autoenv options
 
@@ -59,10 +56,14 @@ source "$ZSHDOT/keymap.zsh"
 source "$ZSHDOT/aliases.zsh"
 
 # Other programs
-# eval `fnm env --multi`
+eval `fnm env --multi`
 eval "$(fasd --init auto)"
 unalias sd
 source "$ZSHDOT/plugins/fzf.zsh"
+
+# Colors
+[[ -f $XDG_CONFIG_HOME/less_termcap ]] && source "$XDG_CONFIG_HOME/less_termcap"
+[[ -f $XDG_CONFIG_HOME/dircolors ]]    && eval "$(dircolors $XDG_CONFIG_HOME/dircolors)"
 
 
 ### SECTION: Terminal specific settings {1
