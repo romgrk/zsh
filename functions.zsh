@@ -32,7 +32,7 @@ function ls_or_cat() {
     then
         ls --group-directories-first --color=always $file
     else
-        cat $file
+        bat $file
     fi
 }
 
