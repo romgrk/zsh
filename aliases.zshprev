@@ -2,7 +2,6 @@ alias _=sudo
 
 alias ls="ls --group-directories-first --color=always"
 alias la="ls -vA"
-alias ll='ls -lhG'
 alias lla='ls -lhvGA'
 alias lsf='ls -l | fzf --preview="echo user={3} when={-4..-2}; cat {-1}" --header-lines=1'
 
@@ -150,3 +149,10 @@ alias rebuild-varwig="ssh legacyportaldev.genome.mcgill.ca 'cd /opt/varwig/ && g
 alias gg="lazygit"
 alias stop='sudo systemctl stop'
 alias start='sudo systemctl start'
+alias ll='exa --long --group-directories-first'
+alias copy-clarity-password="cat ~/documents/pwd.txt | clip"
+alias npm-set-prefix="npm config set prefix /home/rgregoir/.cache/npm-global"
+alias npm-set-prefix="npm config set prefix /home/rgregoir/.cache/npm-global"
+alias npm-delete-prefix="npm config delete prefix"
+alias gdb-run='gdb -ex run --args'
+alias git-discard='git checkout -f --'
