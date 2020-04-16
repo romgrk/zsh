@@ -8,6 +8,8 @@ export HISTFILE="$ZSHDOT/.history"
 export ZSH_ALIASES="$ZSHDOT/aliases.zsh"
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=248'
 
+export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:-"$HOME/.config"}
+
 
 # Autoenv options
 
@@ -62,6 +64,7 @@ unalias sd
 source "$ZSHDOT/plugins/fzf.zsh"
 
 # Colors
+
 [[ -f $XDG_CONFIG_HOME/less_termcap ]] && source "$XDG_CONFIG_HOME/less_termcap"
 [[ -f $XDG_CONFIG_HOME/dircolors ]]    && eval "$(dircolors $XDG_CONFIG_HOME/dircolors)"
 

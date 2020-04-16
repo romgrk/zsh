@@ -1,9 +1,5 @@
 #!/bin/zsh
 
-function rg () {
-    command rg --pretty $@ | less
-}
-
 function aujourdhui () {
     LC_ALL=fr_CA.UTF-8 date +"\%e \%b \%Y"
 }
