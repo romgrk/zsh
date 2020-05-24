@@ -1,7 +1,9 @@
 
 autoload -U zmv
+autoload -U colors
+autoload -U zsh-mime-setup
+autoload -U select-word-style
 
-autoload -U colors zsh-mime-setup select-word-style
 colors          # colors
 zsh-mime-setup  # run everything as if it's an executable
 select-word-style bash # ctrl+w on words
@@ -29,24 +31,6 @@ prompt="%{$fg[$color]%}%n%{$reset_color%}@%U%{$fg[yellow]%}%m%{$reset_color%}%u 
 RPROMPT='${vim_mode} ${vcs_info_msg_0_}'
 
 ##
-# Key bindings
-##
-# Lookup in /etc/termcap or /etc/terminfo else, you can get the right keycode
-# by typing ^v and then type the key or key combination you want to use.
-# "man zshzle" for the list of available actions
-#bindkey -v                      # emacs keybindings
-#bindkey '\e[1;5C' forward-word            # C-Right
-#bindkey '\e[1;5D' backward-word           # C-Left
-#bindkey '\e[2~'   overwrite-mode          # Insert
-#bindkey '\e[3~'   delete-char             # Del
-#bindkey '\e[5~'   history-search-backward # PgUp
-#bindkey '\e[6~'   history-search-forward  # PgDn
-#bindkey '^A'      beginning-of-line       # Home
-#bindkey '^D'      delete-char             # Del
-#bindkey '^E'      end-of-line             # End
-#bindkey '^R'      history-incremental-pattern-search-backward
-
-##
 # Completion
 ##
 autoload -U compinit
@@ -58,6 +42,12 @@ setopt always_to_end            # when completing from the middle of a word, mov
 setopt complete_in_word         # allow completion from within a word/phrase
 setopt list_ambiguous           # complete as much of a completion until it gets ambiguous.
 setopt menu_complete            # Insert first item on tab
+
+#generic completion with --help
+compdef _gnu_generic gcc
+compdef _gnu_generic gdb
+
+# Style
 
 zstyle ':completion::complete:*' use-cache on               # completion caching, use rehash to clear
 zstyle ':completion:*' cache-path ~/.zsh/cache              # cache path
@@ -85,9 +75,6 @@ users=(admin romgrk root)           # because I don't care about others
 zstyle ':completion:*' users $users
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
-#generic completion with --help
-compdef _gnu_generic gcc
-compdef _gnu_generic gdb
 
 ##
 # Pushd

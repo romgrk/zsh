@@ -2,13 +2,13 @@
 
 ### SECTION: Globals {1
 
-export fpath=($HOME/.cache/zsh $fpath)
+export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:-"$HOME/.config"}
 
+export fpath=($HOME/.cache/zsh $fpath)
 export HISTFILE="$ZSHDOT/.history"
 export ZSH_ALIASES="$ZSHDOT/aliases.zsh"
-export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=248'
 
-export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:-"$HOME/.config"}
+source "$ZSHDOT/highlight.zsh"
 
 
 # Autoenv options
