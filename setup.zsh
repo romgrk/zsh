@@ -68,9 +68,9 @@ zstyle ':completion:*::::' completer _expand _complete _ignored _approximate # l
 
 # sections completion !
 zstyle ':completion:*' verbose yes
-zstyle ':completion:*:descriptions' format $'\e[00;34m%d'
-zstyle ':completion:*:messages' format $'\e[00;31m%d'
 zstyle ':completion:*' group-name ''
+zstyle ':completion:*:descriptions' format $'\e[01m%d'
+zstyle ':completion:*:messages'     format $'\e[01m%d'
 zstyle ':completion:*:manuals' separate-sections true
 
 zstyle ':completion:*:processes' command 'ps -au$USER'
@@ -79,8 +79,11 @@ zstyle ':completion:*:kill:*' force-list always
 zstyle ':completion:*:*:kill:*:processes' list-colors "=(#b) #([0-9]#)*=29=34"
 zstyle ':completion:*:*:killall:*' menu yes select
 zstyle ':completion:*:killall:*' force-list always
+
 users=(admin romgrk root)           # because I don't care about others
+
 zstyle ':completion:*' users $users
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 #generic completion with --help
 compdef _gnu_generic gcc

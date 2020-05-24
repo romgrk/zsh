@@ -18,7 +18,10 @@ AUTOENV_IN_FILE=".env" #default
 AUTOENV_OUT_FILE=".out" #default
 COLORS=true #default
 
+# Colors
 
+[[ -f $XDG_CONFIG_HOME/less_termcap ]] && source "$XDG_CONFIG_HOME/less_termcap"
+[[ -f $XDG_CONFIG_HOME/dircolors ]]    && eval "$(dircolors $XDG_CONFIG_HOME/dircolors)"
 
 ### SECTION: Init sequence {1
 
@@ -62,11 +65,6 @@ eval `fnm env --multi`
 eval "$(fasd --init auto)"
 unalias sd
 source "$ZSHDOT/plugins/fzf.zsh"
-
-# Colors
-
-[[ -f $XDG_CONFIG_HOME/less_termcap ]] && source "$XDG_CONFIG_HOME/less_termcap"
-[[ -f $XDG_CONFIG_HOME/dircolors ]]    && eval "$(dircolors $XDG_CONFIG_HOME/dircolors)"
 
 
 ### SECTION: Terminal specific settings {1
