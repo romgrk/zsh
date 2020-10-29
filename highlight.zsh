@@ -23,7 +23,7 @@ local blue=39
 # FAST_HIGHLIGHT_STYLES[hashed-command]='fg=green'
 # To have paths colored instead of underlined
 FAST_HIGHLIGHT_STYLES[path]='fg=magenta'
-FAST_HIGHLIGHT_STYLES[path-to-dir]='fg=magenta'
+FAST_HIGHLIGHT_STYLES[path-to-dir]='fg=#B460FF'
 FAST_HIGHLIGHT_STYLES[path_pathseparator]='fg=#8700ff'
 FAST_HIGHLIGHT_STYLES[globbing]="fg=$blue"
 # FAST_HIGHLIGHT_STYLES[globbing-ext]='fg=13'
