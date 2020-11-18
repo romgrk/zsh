@@ -61,7 +61,7 @@ source "$ZSHDOT/keymap.zsh"
 source "$ZSHDOT/aliases.zsh"
 
 # Other programs
-eval `fnm env --multi`
+eval `fnm env`
 eval "$(fasd --init auto)"
 unalias sd
 source "$ZSHDOT/plugins/fzf.zsh"
@@ -90,3 +90,5 @@ then
 set --
 fi
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
