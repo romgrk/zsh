@@ -47,7 +47,7 @@ kmap "^[l" end-of-line
 
 
 # Navigation
-kmap "^[u" cd-parent-directory
+#kmap "^[u" cd-parent-directory
 #kmap "^[p" cd-previous
 #kmap "^[n" cd-next
 kmap "^[," cd-previous

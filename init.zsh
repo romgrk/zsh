@@ -14,8 +14,8 @@ source "$ZSHDOT/highlight.zsh"
 # Autoenv options
 
 AUTOENV_AUTH_FILE="$XDG_CACHE_HOME/autoenv_auth"
-AUTOENV_IN_FILE=".env" #default
-AUTOENV_OUT_FILE=".out" #default
+AUTOENV_FILE_ENTER=".env"
+AUTOENV_FILE_LEAVE=".env.leave"
 COLORS=true #default
 
 # Colors
@@ -32,7 +32,7 @@ antigen use oh-my-zsh
 antigen bundles <<EOB
     git
     sudo
-    horosgrisa/autoenv
+    Tarrasch/zsh-autoenv
     t413/zsh-background-notify
     zsh-users/zsh-completions
     zdharma/fast-syntax-highlighting

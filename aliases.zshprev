@@ -18,7 +18,6 @@ alias calc='noglob calc'
 
 alias git="hub"
 alias gk="git checkout"
-alias clone="git clone"
 alias gst='git status'
 alias glogline="git log --oneline"
 alias gds='git diff --staged'
@@ -48,6 +47,9 @@ alias pssort="_ ps aux | sort -k3"
 
 alias ji="j -i"
 alias jd="j -d"
+
+function rg () { command rg --pretty $@ | less -F }
+function hexyl () { command hexyl $@ | less -F }
 
 alias pac='pacman -S'
 alias pacr='pacman -R'
@@ -116,7 +118,7 @@ alias xml-format='xmllint --format -'
 alias rg-ls='rg --files-with-matches'
 alias docker-compose='sudo docker-compose'
 alias apti='sudo apt-get install'
-alias apts='apt-cache search'
+function apts () { apt-cache search $1 | less -F }
 alias rg-ls='rg --files-with-matches'
 alias clip='xsel -b -i'
 alias put='xsel -b'
@@ -148,7 +150,6 @@ alias rebuild-varwig="ssh legacyportaldev.genome.mcgill.ca 'cd /opt/varwig/ && g
 alias gg="lazygit"
 alias stop='sudo systemctl stop'
 alias start='sudo systemctl start'
-alias ll='exa --long --group-directories-first'
 alias copy-clarity-password="cat ~/documents/pwd.txt | clip"
 alias npm-set-prefix="npm config set prefix /home/rgregoir/.cache/npm-global"
 alias npm-set-prefix="npm config set prefix /home/rgregoir/.cache/npm-global"
@@ -156,14 +157,39 @@ alias npm-delete-prefix="npm config delete prefix"
 alias gdb-run='gdb -ex run --args'
 alias git-discard='git checkout -f --'
 alias path='echo $PATH | sed -e "s/:/\n/g"'
-alias copy-it-password="cat ~/documents/it-password.txt | clip"
 alias configure-debug='./configure CFLAGS="-ggdb3 -O0" CXXFLAGS="-ggdb3 -O0" LDFLAGS="-ggdb3"'
 alias rrm="/bin/rm"
 alias get-magic-token='curl -k --user c3cHva2-fFmWaxJt8KsbUw..:zh-1h8thUsz2z2GL0PmScg.. --data "grant_type=client_credentials" https://medbeta.medicine.mcgill.ca/ords-uat/genome/oauth/token 2>/dev/null | fx ".access_token"'
 alias amen='git commit --ammend --no-edit'
-alias triton-reset-download-db="rm ./data/downloads.db && sqlite3 ./data/downloads.db < ./schemas/downloads.sql"
-alias copy-genome-password="cat ~/documents/genome-pwd.txt | clip"
 alias rgi='rg -i'
 alias npx-prettier-write='npx prettier --write'
 alias npx-prettier-write-all-js="npx-prettier-write src/**/*.js"
 alias status='sudo systemctl status'
+alias clone="git clone $(put)"
+alias path='echo $PATH | sed -e "s/:/\n/"'
+alias rgi='rg -i'
+alias pyu='pacman -Syu --noconfirm'
+alias mkvirtualenv="python3 -m venv env"
+alias ll='ls -lh'
+alias pip-install='pip install -r requirements.txt'
+alias glo='git log-pretty'
+alias weather='curl http://wttr.in/'
+alias tmp="cd ~/tmp"
+alias dl="cd ~/downloads"
+alias gh="cd ~/github"
+alias amen='git commit --amend --no-edit'
+alias weather='curl http://wttr.in/'
+alias update-auspice='ssh web@132.219.136.217 ./update_auspice.sh'
+alias start-auspice="j auspice && ./auspice.js develop --datasetDir data"
+alias glb="git pull && npm run build"
+alias lines='wc -l'
+alias r-clean='find . -type f -name ._* -delete'
+alias pacman-clear-cache='sudo pacman -Sc'
+alias remove-decorations='xprop -f _MOTIF_WM_HINTS 32c -set _MOTIF_WM_HINTS "0x2, 0x0, 0x0, 0x0, 0x0"'
+alias icat="kitty +kitten icat"
+alias copy-dotfiles-install="echo 'mkdir -p ~/.config && cd ~/.config && git clone https://github.com/romgrk/dotfiles && ./dotfiles/install' | clip"
+alias chars='wc -c'
+alias npm-scripts="cat package.json | jq .scripts"
+alias configure-debug='CPPFLAGS=-DDEBUG CFLAGS="-g -O0" CXXFLAGS="-g -O0" ./configure'
+alias rp="realpath"
+alias npm="pnpm"
