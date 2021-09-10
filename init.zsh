@@ -65,14 +65,9 @@ eval `fnm env`
 eval "$(fasd --init auto)"
 unalias sd
 source "$ZSHDOT/plugins/fzf.zsh"
-
-
-### SECTION: Terminal specific settings {1
-
-#[[ $TERM == 'linux' ]]                   && source $ZSHDOT/term/linux.zsh
-[[ $COLORTERM == 'drop-down-terminal' ]] && source $ZSHDOT/term/dropdown.zsh
-[[ -n $DROPDOWNTERM ]] && source $ZSHDOT/term/dropdown.zsh
-#[[ $COLORTERM == 'rox-term' ]]           && source $ZSHDOT/term/roxterm.zsh
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+    source /etc/profile.d/vte.sh
+fi
 
 unset -f nmap
 
@@ -82,13 +77,9 @@ if [ -f "$HOME/.local.zshrc" ]; then
     source "$HOME/.local.zshrc"
 fi
 
-
 # Run commands
 if [[ $1 == eval ]]
 then
     "$@"
 set --
 fi
-
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
