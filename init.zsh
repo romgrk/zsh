@@ -14,8 +14,8 @@ source "$ZSHDOT/highlight.zsh"
 # Autoenv options
 
 AUTOENV_AUTH_FILE="$XDG_CACHE_HOME/autoenv_auth"
-AUTOENV_FILE_ENTER=".env"
-AUTOENV_FILE_LEAVE=".env.leave"
+AUTOENV_FILE_ENTER=".autoenv"
+AUTOENV_FILE_LEAVE=".autoenv.leave"
 COLORS=true #default
 
 # Colors
