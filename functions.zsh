@@ -18,7 +18,15 @@ function find-port-usage () {
 }
 
 function kill-process-using-port () {
-    kill $(find-port-usage $1 | awk '{ print $7 }' | sed 's/\/.*//' | head -1)
+    local process_list="$(find-port-usage $1)"
+    if [[ -z "$process_list" ]]; then
+        echo "No process found"
+    else
+        local pid="$(echo "$process_list" | awk '{ print $7 }' | sed 's/\/.*//' | head -1)"
+        echo "Killing process $pid:"
+        echo "  $process_list"
+        kill -9 $pid
+    fi
 }
 
 function ls_or_cat() {
