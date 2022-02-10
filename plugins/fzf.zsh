@@ -16,7 +16,7 @@ fi
 
 
 # FIXME for colors
-[[ ! ( $TERM =~ '256' ) ]] && export TERM="xterm-256color"
+[[ ! ( $TERM =~ '256' ) ]] && [[ ! ( $TERM =~ 'kitty' ) ]] && export TERM="xterm-256color"
 
 
 export FZF_DEFAULT_OPTS='--inline-info

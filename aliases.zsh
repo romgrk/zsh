@@ -191,5 +191,5 @@ alias chars='wc -c'
 alias npm-scripts="cat package.json | jq .scripts"
 alias configure-debug='CPPFLAGS=-DDEBUG CFLAGS="-g -O0" CXXFLAGS="-g -O0" ./configure'
 alias rp="realpath"
-alias npm="pnpm"
 alias npmu='npm uninstall'
+alias npm="pnpm"

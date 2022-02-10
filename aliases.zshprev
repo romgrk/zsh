@@ -39,7 +39,6 @@ alias good='git bisect good'
 alias npmy='npm init --yes'
 alias npmi='npm install --save'
 alias npmdev="npm install --save-dev"
-alias npmu="npm uninstall --save"
 alias npmg='npm i -g'
 
 alias psgrep="_ ps aux | egrep"
@@ -193,3 +192,4 @@ alias npm-scripts="cat package.json | jq .scripts"
 alias configure-debug='CPPFLAGS=-DDEBUG CFLAGS="-g -O0" CXXFLAGS="-g -O0" ./configure'
 alias rp="realpath"
 alias npm="pnpm"
+alias npmu='npm uninstall'
