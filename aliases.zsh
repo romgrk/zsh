@@ -17,7 +17,6 @@ alias hello='echo world'
 alias calc='noglob calc'
 
 alias git="hub"
-alias gk="git checkout"
 alias gst='git status'
 alias glogline="git log --oneline"
 alias gds='git diff --staged'
@@ -35,6 +34,15 @@ alias gsp='git stash pop'
 alias gpf='git push --force'
 alias bad='git bisect bad'
 alias good='git bisect good'
+function quick_checkout() {
+    local branch="${1:-$(git branch | fzf | sed 's/ +//;')}"
+    git checkout $branch
+}
+alias gk='quick_checkout'
+alias gkm="git checkout master && git pull"
+alias gkb='git checkout -b'
+alias gR='git restore'
+alias gRR='git restore .'
 
 alias npmy='npm init --yes'
 alias npmi='npm install --save'
@@ -193,3 +201,6 @@ alias configure-debug='CPPFLAGS=-DDEBUG CFLAGS="-g -O0" CXXFLAGS="-g -O0" ./conf
 alias rp="realpath"
 alias npmu='npm uninstall'
 alias npm="pnpm"
+alias grc='git rebase --continue'
+alias howdoi="hors"
+alias mount-windows='sudo mount -t ntfs /dev/nvme0n1p3 /mnt/c'
