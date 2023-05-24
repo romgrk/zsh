@@ -1,5 +1,8 @@
 # File: init.zsh
 
+# XXX: fix this
+source "$HOME/.profile"
+
 ### SECTION: Globals {1
 
 export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:-"$HOME/.config"}
@@ -35,10 +38,11 @@ antigen bundles <<EOB
     Tarrasch/zsh-autoenv
     t413/zsh-background-notify
     zsh-users/zsh-completions
-    zdharma/fast-syntax-highlighting
+    zsh-users/zsh-syntax-highlighting
     zsh-users/zsh-autosuggestions
 EOB
 antigen apply
+# z-shell/F-Sy-H
 # zsh-users/zsh-syntax-highlighting
 
 compdef g=hub
@@ -61,7 +65,7 @@ source "$ZSHDOT/keymap.zsh"
 source "$ZSHDOT/aliases.zsh"
 
 # Other programs
-eval `fnm env`
+# eval `fnm env` # Currently done in ~/.profile
 eval "$(fasd --init auto)"
 unalias sd
 source "$ZSHDOT/plugins/fzf.zsh"

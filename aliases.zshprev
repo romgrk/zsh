@@ -17,7 +17,6 @@ alias hello='echo world'
 alias calc='noglob calc'
 
 alias git="hub"
-alias gk="git checkout"
 alias gst='git status'
 alias glogline="git log --oneline"
 alias gds='git diff --staged'
@@ -35,6 +34,16 @@ alias gsp='git stash pop'
 alias gpf='git push --force'
 alias bad='git bisect bad'
 alias good='git bisect good'
+function quick_checkout() {
+    local branch="${1:-$(git branch | fzf | sed 's/ +//;')}"
+    git checkout $branch
+}
+alias gk='quick_checkout'
+alias gkma='git checkout master && git pull'
+alias gkmi='git checkout main   && git pull'
+alias gkb='git checkout -b'
+alias gR='git restore'
+alias gRR='git restore .'
 
 alias npmy='npm init --yes'
 alias npmi='npm install --save'
@@ -98,8 +107,8 @@ alias pkv='pkg-config --modversion'
 alias lastpart='echo $(clip -o) | fex /-1'
 alias clo='clone `clip -o` && cd `lastpart` && clear && la'
 alias pacn='pacman -S --needed --noconfirm'
-alias pss="yaourt -Ss"
-alias pacman="yaourt"
+alias pss="yay -Ss"
+alias pacman="yay"
 alias lc="lsc"
 alias v="gloobus-preview"
 alias pacl='pacman -Q'
@@ -175,7 +184,6 @@ alias glo='git log-pretty'
 alias weather='curl http://wttr.in/'
 alias tmp="cd ~/tmp"
 alias dl="cd ~/downloads"
-alias gh="cd ~/github"
 alias amen='git commit --amend --no-edit'
 alias weather='curl http://wttr.in/'
 alias update-auspice='ssh web@132.219.136.217 ./update_auspice.sh'
@@ -191,5 +199,11 @@ alias chars='wc -c'
 alias npm-scripts="cat package.json | jq .scripts"
 alias configure-debug='CPPFLAGS=-DDEBUG CFLAGS="-g -O0" CXXFLAGS="-g -O0" ./configure'
 alias rp="realpath"
-alias npm="pnpm"
 alias npmu='npm uninstall'
+alias grc='git rebase --continue'
+alias howdoi="hors"
+alias mount-windows='sudo mount -t ntfs /dev/nvme0n1p3 /mnt/c'
+alias cjs="comparative-js"
+alias cpcpp="/home/romgrk/src/comparative-database-main/cpp/build/bin/comparative"
+alias ast-grep="/home/romgrk/.cargo/bin/sg"
+alias gkm='git checkout master'

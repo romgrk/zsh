@@ -39,7 +39,8 @@ function quick_checkout() {
     git checkout $branch
 }
 alias gk='quick_checkout'
-alias gkm="git checkout master && git pull"
+alias gkma='git checkout master && git pull'
+alias gkmi='git checkout main   && git pull'
 alias gkb='git checkout -b'
 alias gR='git restore'
 alias gRR='git restore .'
@@ -106,8 +107,8 @@ alias pkv='pkg-config --modversion'
 alias lastpart='echo $(clip -o) | fex /-1'
 alias clo='clone `clip -o` && cd `lastpart` && clear && la'
 alias pacn='pacman -S --needed --noconfirm'
-alias pss="yaourt -Ss"
-alias pacman="yaourt"
+alias pss="yay -Ss"
+alias pacman="yay"
 alias lc="lsc"
 alias v="gloobus-preview"
 alias pacl='pacman -Q'
@@ -183,7 +184,6 @@ alias glo='git log-pretty'
 alias weather='curl http://wttr.in/'
 alias tmp="cd ~/tmp"
 alias dl="cd ~/downloads"
-alias gh="cd ~/github"
 alias amen='git commit --amend --no-edit'
 alias weather='curl http://wttr.in/'
 alias update-auspice='ssh web@132.219.136.217 ./update_auspice.sh'
@@ -200,7 +200,10 @@ alias npm-scripts="cat package.json | jq .scripts"
 alias configure-debug='CPPFLAGS=-DDEBUG CFLAGS="-g -O0" CXXFLAGS="-g -O0" ./configure'
 alias rp="realpath"
 alias npmu='npm uninstall'
-alias npm="pnpm"
 alias grc='git rebase --continue'
 alias howdoi="hors"
 alias mount-windows='sudo mount -t ntfs /dev/nvme0n1p3 /mnt/c'
+alias cjs="comparative-js"
+alias cpcpp="/home/romgrk/src/comparative-database-main/cpp/build/bin/comparative"
+alias ast-grep="/home/romgrk/.cargo/bin/sg"
+alias gkm='git checkout master'
