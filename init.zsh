@@ -65,16 +65,14 @@ source "$ZSHDOT/keymap.zsh"
 source "$ZSHDOT/aliases.zsh"
 
 # Other programs
-# eval `fnm env` # Currently done in ~/.profile
+
 eval "$(fasd --init auto)"
 unalias sd
+
 source "$ZSHDOT/plugins/fzf.zsh"
-if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-    source /etc/profile.d/vte.sh
-fi
 
 # Atuin
-eval "$(atuin init zsh)"
+# eval "$(atuin init zsh)"
 
 # Less
 export LESS=-iMFXRj12a#1
