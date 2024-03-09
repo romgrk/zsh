@@ -16,7 +16,6 @@ alias grep="noglob grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}"
 alias hello='echo world'
 alias calc='noglob calc'
 
-alias git="hub"
 alias gst='git status'
 alias glogline="git log --oneline"
 alias gds='git diff --staged'
@@ -62,6 +61,7 @@ function hexyl () { command hexyl $@ | less -F }
 alias pac='pacman -S'
 alias pacr='pacman -R'
 alias pacs='pacman -Ss'
+alias pacss="yay -Slq | fzf --preview 'yay -Si {}' --height=97% --layout=reverse --bind 'enter:execute(yay -Si {} | less)'"
 
 alias sample="strace -o ./sample.log -p"
 
@@ -201,9 +201,18 @@ alias configure-debug='CPPFLAGS=-DDEBUG CFLAGS="-g -O0" CXXFLAGS="-g -O0" ./conf
 alias rp="realpath"
 alias npmu='npm uninstall'
 alias grc='git rebase --continue'
-alias howdoi="hors"
 alias mount-windows='sudo mount -t ntfs /dev/nvme0n1p3 /mnt/c'
 alias cjs="comparative-js"
 alias cpcpp="/home/romgrk/src/comparative-database-main/cpp/build/bin/comparative"
 alias ast-grep="/home/romgrk/.cargo/bin/sg"
 alias gkm='git checkout master'
+alias lint="yarn prettier && yarn eslint"
+alias git="hub"
+alias jxd="j mui-x && yarn docs:dev"
+alias gclint="git commit -am "lint""
+alias gcl="git commit -am lint"
+alias gclp="gcl && gp"
+alias hx="helix"
+alias zed='ENABLE_DEVICE_CHOOSER_LAYER=1 VULKAN_DEVICE_INDEX=1 cargo run'
+alias rgf='rg --files-with-matches'
+alias catp='cat package.json'

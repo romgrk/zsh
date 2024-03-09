@@ -16,7 +16,6 @@ alias grep="noglob grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}"
 alias hello='echo world'
 alias calc='noglob calc'
 
-alias git="hub"
 alias gst='git status'
 alias glogline="git log --oneline"
 alias gds='git diff --staged'
@@ -201,9 +200,14 @@ alias configure-debug='CPPFLAGS=-DDEBUG CFLAGS="-g -O0" CXXFLAGS="-g -O0" ./conf
 alias rp="realpath"
 alias npmu='npm uninstall'
 alias grc='git rebase --continue'
-alias howdoi="hors"
 alias mount-windows='sudo mount -t ntfs /dev/nvme0n1p3 /mnt/c'
 alias cjs="comparative-js"
 alias cpcpp="/home/romgrk/src/comparative-database-main/cpp/build/bin/comparative"
 alias ast-grep="/home/romgrk/.cargo/bin/sg"
 alias gkm='git checkout master'
+alias lint="yarn prettier && yarn eslint"
+alias git="hub"
+alias jxd="j mui-x && yarn docs:dev"
+alias gclint="git commit -am "lint""
+alias glgp="gcam lint && gp"
+alias gcl="git commit -am lint"

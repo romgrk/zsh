@@ -73,7 +73,23 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
     source /etc/profile.d/vte.sh
 fi
 
+# Atuin
+eval "$(atuin init zsh)"
+
+# Less
+export LESS=-iMFXRj12a#1
+
+# pnpm
+export PNPM_HOME="/home/romgrk/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+
 unset -f nmap
+
 
 ### SECTION: Local settings {1
 
