@@ -46,7 +46,6 @@ alias gRR='git restore .'
 
 alias npmy='npm init --yes'
 alias npmi='npm install --save'
-alias npmdev="npm install --save-dev"
 alias npmg='npm i -g'
 
 alias psgrep="_ ps aux | egrep"
@@ -59,7 +58,7 @@ function rg () { command rg --pretty $@ | less -F }
 function hexyl () { command hexyl $@ | less -F }
 
 alias pac='pacman -S'
-alias pacr='pacman -R'
+alias pacr='pacman -Rs'
 alias pacs='pacman -Ss'
 alias pacss="yay -Slq | fzf --preview 'yay -Si {}' --height=97% --layout=reverse --bind 'enter:execute(yay -Si {} | less)'"
 
@@ -213,6 +212,9 @@ alias gclint="git commit -am "lint""
 alias gcl="git commit -am lint"
 alias gclp="gcl && gp"
 alias hx="helix"
-alias zed='ENABLE_DEVICE_CHOOSER_LAYER=1 VULKAN_DEVICE_INDEX=1 cargo run'
 alias rgf='rg --files-with-matches'
 alias catp='cat package.json'
+alias npmdev='pnpm install -D'
+alias serve='pnpx serve'
+alias p="pnpm"
+alias px="pnpx"
