@@ -46,7 +46,6 @@ alias gRR='git restore .'
 
 alias npmy='npm init --yes'
 alias npmi='npm install --save'
-alias npmdev="npm install --save-dev"
 alias npmg='npm i -g'
 
 alias psgrep="_ ps aux | egrep"
@@ -59,8 +58,9 @@ function rg () { command rg --pretty $@ | less -F }
 function hexyl () { command hexyl $@ | less -F }
 
 alias pac='pacman -S'
-alias pacr='pacman -R'
+alias pacr='pacman -Rs'
 alias pacs='pacman -Ss'
+alias pacss="yay -Slq | fzf --preview 'yay -Si {}' --height=97% --layout=reverse --bind 'enter:execute(yay -Si {} | less)'"
 
 alias sample="strace -o ./sample.log -p"
 
@@ -203,11 +203,19 @@ alias grc='git rebase --continue'
 alias mount-windows='sudo mount -t ntfs /dev/nvme0n1p3 /mnt/c'
 alias cjs="comparative-js"
 alias cpcpp="/home/romgrk/src/comparative-database-main/cpp/build/bin/comparative"
-alias ast-grep="/home/romgrk/.cargo/bin/sg"
 alias gkm='git checkout master'
 alias lint="yarn prettier && yarn eslint"
 alias git="hub"
-alias jxd="j mui-x && yarn docs:dev"
 alias gclint="git commit -am "lint""
-alias glgp="gcam lint && gp"
 alias gcl="git commit -am lint"
+alias gclp="gcl && gp"
+alias hx="helix"
+alias rgf='rg --files-with-matches'
+alias catp='cat package.json'
+alias npmdev='pnpm install -D'
+alias serve='pnpx serve'
+alias p="pnpm"
+alias px="pnpx"
+alias pr='pnpm run'
+alias prs='pnpm run start'
+alias jxd="j mui-x && pnpm run docs:dev"
