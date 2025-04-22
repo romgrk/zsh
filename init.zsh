@@ -36,7 +36,6 @@ antigen bundles <<EOB
     git
     sudo
     Tarrasch/zsh-autoenv
-    t413/zsh-background-notify
     zsh-users/zsh-completions
     zsh-users/zsh-syntax-highlighting
     zsh-users/zsh-autosuggestions
@@ -46,6 +45,8 @@ antigen apply
 # zsh-users/zsh-syntax-highlighting
 
 compdef g=hub
+
+source "$ZSHDOT/plugins/bgnotify.plugin.zsh"
 
 # Scripts
 source "$ZSHDOT/functions.zsh"

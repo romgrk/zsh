@@ -153,3 +153,4 @@ alias x="extract"
 alias xml-format='xmllint --format -'
 alias xo="xdg-open"
 function apts () { apt-cache search $1 | less -F }
+alias pipd="pnpm install && pnpm dedupe"
