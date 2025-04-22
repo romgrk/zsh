@@ -17,7 +17,7 @@ if ! (type bgnotify_formatted | grep -q 'function'); then ## allow custom functi
     elapsed="$(( $3 % 60 ))s"
     (( $3 >= 60 )) && elapsed="$((( $3 % 3600) / 60 ))m $elapsed"
     (( $3 >= 3600 )) && elapsed="$(( $3 / 3600 ))h $elapsed"
-    [ $1 -eq 0 ] && bgnotify "$2" "Completed in $elapsed" "$1" || bgnotify "$2" "Failed in $elapsed" "$1"
+    [ $1 -eq 0 ] && bgnotify "$2" "Completed in $elapsed" "$1" || bgnotify "$2" "Failed after $elapsed" "$1"
   }
 fi
 
