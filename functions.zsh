@@ -44,8 +44,6 @@ function ls_or_cat() {
 function welcome() {
     LC_ALL=fr_CA.UTF-8 date +"%e %b"
     print "\n"
-    fortune -e | sed -e 's/^/\t/'
-    print "\n"
 }
 
 # CMD and UNCMD are permanent alias
