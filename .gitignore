@@ -1,2 +1,4 @@
 .history
-.zcompdump
+.zsh_history
+.zcompdump*
+.zdirs

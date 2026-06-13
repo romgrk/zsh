@@ -1,1 +1,0 @@
-/home/romgrk/.local/powerline/powerline/bindings/zsh/powerline.zsh
