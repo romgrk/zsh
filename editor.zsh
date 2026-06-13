@@ -2,9 +2,10 @@
 
 # Zsh/Zle widgets & more
 
-# ls dir on each cd
+# ls dir on each cd (skipped under automation for clean output)
 function chpwd() {
     emulate -L zsh
+    [[ -n $SHELL_AUTOMATION ]] && return
     ls --group-directories-first
     # RPS1="`get_rprompt`"
 }

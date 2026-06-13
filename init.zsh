@@ -58,9 +58,6 @@ source "$ZSHDOT/plugins/bgnotify.plugin.zsh"
 source "$ZSHDOT/functions.zsh"
 source "$ZSHDOT/editor.zsh"
 
-# Welcome message
-[[ -z $MYVIMRC ]] && welcome
-
 # source "$ZSHDOT/prompt.zsh"
 source "$ZSHDOT/promptline.sh"
 
@@ -92,6 +89,7 @@ case ":$PATH:" in
 esac
 # pnpm end
 
+export NVIM_LOG_FILE="/dev/null"
 
 unset -f nmap
 

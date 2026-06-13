@@ -40,12 +40,6 @@ function ls_or_cat() {
     fi
 }
 
-# Welcome message
-function welcome() {
-    LC_ALL=fr_CA.UTF-8 date +"%e %b"
-    print "\n"
-}
-
 # CMD and UNCMD are permanent alias
 function cmd () {
     if [[ $# == 0 ]]; then
