@@ -7,6 +7,12 @@ source "$HOME/.profile"
 
 export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:-"$HOME/.config"}
 
+# Automation contexts (Claude Code, etc.) snapshot this rc and replay it for
+# every command, so they need clean, parseable output. Detect them once here;
+# downstream we skip the aliases/functions that colorize or pipe through pagers.
+# Generic flag so other tools can opt in by exporting it themselves.
+[[ -n $CLAUDECODE ]] && export SHELL_AUTOMATION=1
+
 export fpath=($HOME/.cache/zsh $fpath)
 export HISTFILE="$ZSHDOT/.history"
 export ZSH_ALIASES="$ZSHDOT/aliases.zsh"
@@ -63,7 +69,7 @@ source "$ZSHDOT/setup.zsh"
 
 # Keymap & aliases
 source "$ZSHDOT/keymap.zsh"
-source "$ZSHDOT/aliases.zsh"
+[[ -z $SHELL_AUTOMATION ]] && source "$ZSHDOT/aliases.zsh"
 
 # Other programs
 
@@ -95,6 +101,10 @@ unset -f nmap
 if [ -f "$HOME/.local.zshrc" ]; then
     source "$HOME/.local.zshrc"
 fi
+
+# Under automation, also drop any aliases supplied by plugins (oh-my-zsh, etc.)
+# that loaded before the aliases.zsh guard above. Generic, no hardcoded list.
+[[ -n $SHELL_AUTOMATION ]] && unalias -a 2>/dev/null
 
 # Run commands
 if [[ $1 == eval ]]
