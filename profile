@@ -25,14 +25,7 @@ export CONFIG="$HOME/.config"
 
 # Local executables
 export PATH="$HOME/bin:$PATH"
-# Local scripts
-export PATH="$PATH:$HOME/sh"
-# Multi-Git
-export PATH="$PATH:$HOME/.local/git-plus"
-# Cabal/Haskell binaries
-export PATH="$PATH:$HOME/.cabal/bin"
-# Local node executables
-export PATH="$PATH:$HOME/node_modules/.bin"
+
 # Ruby gems FIXME
 export gemdir="$HOME/.gem/ruby/2.3.0/bin"
 export PATH="$PATH:$gemdir"
@@ -53,37 +46,11 @@ export ZDOTDIR="$HOME/.config/zsh"
 # Package Config
 export PKG_CONFIG_PATH="/usr/lib/pkgconfig:/usr/share/pkgconfig:/usr/local/lib/pkgconfig"
 
-# Node.js
-NODE_PATH="$HOME/modules"
-NODE_PATH+="$HOME/node_modules"
-NODE_PATH+="$HOME/.node_modules"
-export NODE_PATH
-
-# Lua
-eval `luarocks-5.1 path`
-LUA_PATH="./?.lua;$LUA_PATH"
-LUA_PATH="/home/romgrk/lua/share/?.lua;$LUA_PATH"
-LUA_PATH="/home/romgrk/lua/share/?/?.lua;$LUA_PATH"
-LUA_PATH="/home/romgrk/lua/share/?/init.lua;$LUA_PATH"
-LUA_PATH="$LUA_PATH;/usr/share/lua/5.1/?.lua;"
-LUA_PATH="$LUA_PATH;/usr/share/lua/5.1/?/init.lua;"
-export LUA_PATH
-
-
-# Python
-export WORKON_HOME="$HOME/.virtualenv"
-#source /usr/bin/virtualenvwrapper.sh
-
-
-
 # SECTION: applications vars
 
 # Neovim
 export VISUAL="nvim"
 export EDITOR="nvim"
-
-# Dash/Zeal
-export DASHT_DOCSETS_DIR="$HOME/.local/share/Zeal/Zeal/docsets"
 
 # LS colors
 eval "$(dircolors $HOME/.config/dircolors)"
