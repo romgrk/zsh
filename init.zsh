@@ -66,7 +66,7 @@ source "$ZSHDOT/setup.zsh"
 
 # Keymap & aliases
 source "$ZSHDOT/keymap.zsh"
-[[ -z $SHELL_AUTOMATION ]] && source "$ZSHDOT/aliases.zsh"
+has_shell_automation || source "$ZSHDOT/aliases.zsh"
 
 # Other programs
 
@@ -102,7 +102,7 @@ fi
 
 # Under automation, also drop any aliases supplied by plugins (oh-my-zsh, etc.)
 # that loaded before the aliases.zsh guard above. Generic, no hardcoded list.
-[[ -n $SHELL_AUTOMATION ]] && unalias -a 2>/dev/null
+has_shell_automation && unalias -a 2>/dev/null
 
 # Run commands
 if [[ $1 == eval ]]

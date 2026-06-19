@@ -1,5 +1,16 @@
 #!/bin/zsh
 
+# True in a non-interactive automation context (Claude Code, CI, etc.) that
+# snapshots/replays this rc and needs clean, parseable output. CLAUDECODE is
+# exported by Claude Code's Bash tool — and unlike SHELL_AUTOMATION it survives
+# into the snapshot shell, since that shell inherits the env but never sources
+# init.zsh. SHELL_AUTOMATION stays the generic flag other tools can opt in with.
+# Define this before editor.zsh and the aliases guards in init.zsh so they share
+# one check; it's a function, so it's captured in the snapshot too.
+function has_shell_automation () {
+    [[ -n $SHELL_AUTOMATION || -n $CLAUDECODE ]]
+}
+
 function aujourdhui () {
     LC_ALL=fr_CA.UTF-8 date +"\%e \%b \%Y"
 }
