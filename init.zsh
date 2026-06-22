@@ -73,6 +73,12 @@ has_shell_automation || source "$ZSHDOT/aliases.zsh"
 eval "$(fasd --init auto)"
 unalias sd
 
+eval "$(fnm env)"
+trap 'rm -f $FNM_MULTISHELL_PATH' EXIT
+
+eval "$(rbenv init -)"
+
+
 source "$ZSHDOT/plugins/fzf.zsh"
 
 # Atuin

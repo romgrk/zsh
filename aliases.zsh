@@ -160,3 +160,4 @@ alias clc='claude --continue'
 alias cl="claude"
 alias cll='claude --continue'
 alias kitty-claude="kitty --config ~/.config/kitty/claude.conf"
+alias pacs="pacman-search-and-install"

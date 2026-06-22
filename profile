@@ -26,12 +26,15 @@ export CONFIG="$HOME/.config"
 # Local executables
 export PATH="$HOME/bin:$PATH"
 
+# PNPM
+export PATH="$PATH:$HOME/.local/share/pnpm/bin"
+
 # Ruby gems FIXME
 export gemdir="$HOME/.gem/ruby/2.3.0/bin"
 export PATH="$PATH:$gemdir"
 
 # fzf path export
-source "$HOME/local/share/fzf.sh"
+# source "$HOME/local/share/fzf.sh"
 
 
 # SECTION: other paths
