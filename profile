@@ -25,12 +25,14 @@ export CONFIG="$HOME/.config"
 
 # Local executables
 export PATH="$HOME/bin:$PATH"
+export PATH="$PATH:$HOME/.cargo/bin"
+export PATH="$PATH:$HOME/.local/bin"
 
 # PNPM
 export PATH="$PATH:$HOME/.local/share/pnpm/bin"
 
-# Ruby gems FIXME
-export gemdir="$HOME/.gem/ruby/2.3.0/bin"
+# Ruby gems
+export gemdir="$HOME/.local/share/gem/ruby/3.0.0/bin"
 export PATH="$PATH:$gemdir"
 
 # fzf path export
@@ -39,7 +41,7 @@ export PATH="$PATH:$gemdir"
 
 # SECTION: other paths
 
-export GOPATH="$HOME/.gopath"
+export GOPATH="$HOME/.local/share/go"
 export PATH=$PATH:${GOPATH//://bin:}/bin
 
 # ZSH path
@@ -58,4 +60,7 @@ export EDITOR="nvim"
 # LS colors
 eval "$(dircolors $HOME/.config/dircolors)"
 # export LS_COLORS=...
+
+# SECTION: secrets (gitignored, not committed)
+[[ -f "$HOME/.config/zsh/secrets.zsh" ]] && source "$HOME/.config/zsh/secrets.zsh"
 

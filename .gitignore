@@ -2,3 +2,4 @@
 .zsh_history
 .zcompdump*
 .zdirs
+secrets.zsh
