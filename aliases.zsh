@@ -53,8 +53,13 @@ alias bad='git bisect bad'
 alias good='git bisect good'
 
 alias npmy='npm init --yes'
-alias npmi='npm install --save'
 alias npmg='npm i -g'
+
+alias p='nub'
+alias pi='nub install'
+alias pr='nub run'
+alias prs='nub run start'
+alias pipd="nub install && nub dedupe"
 
 alias psgrep="_ ps aux | egrep"
 alias pssort="_ ps aux | sort -k3"
@@ -67,7 +72,6 @@ function hexyl () { command hexyl $@ | less -F }
 
 alias pac='pacman -S'
 alias pacr='pacman -Rs'
-alias pacs='pacman -Ss'
 alias pacss="yay -Slq | fzf --preview 'yay -Si {}' --height=97% --layout=reverse --bind 'enter:execute(yay -Si {} | less)'"
 
 alias sed="sed -r"
@@ -100,7 +104,6 @@ alias icat="kitty +kitten icat"
 alias j="z"
 alias jr='fasd -D'
 alias jv="jq ''"
-alias jxd="j mui-x && pnpm run docs:dev"
 alias l="ls_or_cat"
 alias lastpart='echo $(clip -o) | fex /-1'
 alias lint="pr prettier && pr eslint"
@@ -111,9 +114,7 @@ alias mmv='zmv -n'
 alias mount-windows='sudo mount -t ntfs /dev/nvme0n1p3 /mnt/c'
 alias now='date +%T'
 alias p-scripts="cat package.json | jq .scripts"
-alias npmdev='pnpm install -D'
 alias npmu='npm uninstall'
-alias p="pnpm"
 alias pacgrep="pacman -Q | grep"
 alias pacl='pacman -Q'
 alias pacman-clear-cache='sudo pacman -Sc'
@@ -122,10 +123,7 @@ alias pacn='pacman -S --needed --noconfirm'
 alias pacu='pacman -S --noconfirm'
 alias path='echo $PATH | sed -e "s/:/\n/"'
 alias path='echo $PATH | sed -e "s/:/\n/g"'
-alias pi='pnpm install'
-alias pr='pnpm run'
 alias preview="fzf --preview 'bat --color "always" {}'"
-alias prs='pnpm run start'
 alias pss="yay -Ss"
 alias put='xsel -b'
 alias px="pnpx"
@@ -152,7 +150,6 @@ alias x="extract"
 alias xml-format='xmllint --format -'
 alias xo="xdg-open"
 function apts () { apt-cache search $1 | less -F }
-alias pipd="pnpm install && pnpm dedupe"
 alias gmm='git merge master --no-edit'
 alias reload-hide-top-bar="gnome-extensions disable hidetopbar@mathieu.bidon.ca && gnome-extensions enable hidetopbar@mathieu.bidon.ca"
 alias gua="git restore --staged ."
@@ -160,4 +157,5 @@ alias clc='claude --continue'
 alias cl="claude"
 alias cll='claude --continue'
 alias kitty-claude="kitty --config ~/.config/kitty/claude.conf"
-alias pacs="pacman-search-and-install"
+alias pacs="yay -Ss"
+alias jxd="j mui-x && pr docs:dev"
